@@ -1,0 +1,1620 @@
+Log started at 04/05/2023 10:42:41 (2023-04-05T06:42:41Z)
+Adding event matcher: CompileEventMatcher
+Adding event matcher: LinkEventMatcher
+Adding event matcher: MicrosoftEventMatcher
+Adding event matcher: XoreaxEventMatcher
+No config file at C:\Users\misak\Documents\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Configuration will be read from:
+  C:\Users\misak\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Log file: C:\Users\misak\AppData\Roaming\Unreal Engine\AutomationTool\Logs\C+UE+UE_5.1\UBT-Proun_Pre_Alpha-Win64-Development.txt
+
+    Registering build platform: UnrealBuildTool.AndroidPlatformFactory
+Note: Android toolchain NDK r25b recommended
+        Registering build platform: Android - buildable: True
+    Registering build platform: UnrealBuildTool.IOSPlatformFactory
+    Registering build platform: UnrealBuildTool.LinuxPlatformFactory
+    Registering build platform: UnrealBuildTool.MacPlatformFactory
+    Registering build platform: UnrealBuildTool.TVOSPlatformFactory
+    Registering build platform: UnrealBuildTool.WindowsPlatformFactory
+Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (1)
+Found Windows 10 SDK version 10.0.19041.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.19041.0 at C:\Program Files (x86)\Windows Kits\10
+Win64 Installed SDK(s): MinVersion_Sdk=10.0.00000.0, MaxVersion_Sdk=10.9.99999.0, CurrentVersion_Sdk=10.0.19041.0, Version_AutoSdk=10.0.18362.0, CurrentVersion_AutoSdk=
+        Registering build platform: Win64 - buildable: True
+    Registering build platform: UnrealBuildTool.HoloLensPlatformFactory
+Command line: C:\UE\UE_5.1\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll Proun_Pre_Alpha Win64 Development -Project=O:\PerforceProjects\Proun_Pre_Alpha_5_1\Proun_Pre_Alpha.uproject O:\PerforceProjects\Proun_Pre_Alpha_5_1\Proun_Pre_Alpha.uproject -NoUBTMakefiles -remoteini=O:\PerforceProjects\Proun_Pre_Alpha_5_1 -skipdeploy -Manifest=O:\PerforceProjects\Proun_Pre_Alpha_5_1\Intermediate\Build\Manifest.xml -NoHotReload "-log=C:\Users\misak\AppData\Roaming\Unreal Engine\AutomationTool\Logs\C+UE+UE_5.1\UBT-Proun_Pre_Alpha-Win64-Development.txt"
+Creating project rules assembly for O:\PerforceProjects\Proun_Pre_Alpha_5_1\Proun_Pre_Alpha.uproject...
+Skipping C:\UE\UE_5.1\Engine\Intermediate\Build\BuildRules\UE5Rules.dll: File is installed
+Skipping C:\UE\UE_5.1\Engine\Intermediate\Build\BuildRules\UE5ProgramRules.dll: File is installed
+ Found 1 Plugins:
+  O:\PerforceProjects\Proun_Pre_Alpha_5_1\Plugins\GameFeatures\Magic1\Magic1.uplugin
+ Found 0 Modules:
+DEPRECATION: 'IniKeyBlacklist', which is a config key in section [/Script/UnrealEd.ProjectPackagingSettings], in 'O:\PerforceProjects\Proun_Pre_Alpha_5_1\Config\DefaultGame.ini', has been deprecated. Using 'IniKeyDenylist' instead. It is recommended you update your .ini files as soon as possible, and replace IniKeyBlacklist with IniKeyDenylist
+Found Visual Studio installation: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community (Product=Microsoft.VisualStudio.Product.Community, Version=16.11.33328.57)
+Found Visual Studio installation: C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools (Product=Microsoft.VisualStudio.Product.BuildTools, Version=16.11.33130.400)
+Found Visual Studio toolchain: C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133 (Family=14.29.30133, FamilyRank=0, Version=14.29.30147, Is64Bit=True, Preview=False, Architecture=x64, Error=False, Redist=C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Redist\MSVC\14.29.30133)
+Found Visual Studio toolchain: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133 (Family=14.29.30133, FamilyRank=0, Version=14.29.30148, Is64Bit=True, Preview=False, Architecture=x64, Error=False, Redist=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Redist\MSVC\14.29.30133)
+Found Visual Studio toolchain: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133 (Family=14.29.30133, FamilyRank=0, Version=14.29.30148, Is64Bit=True, Preview=False, Architecture=ARM64, Error=False, Redist=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Redist\MSVC\14.29.30133)
+Building UnrealGame - Proun_Pre_Alpha - Win64 - Development
+Compile Env Launch: WITH_LAUNCHERCHECK=0
+Compile Env Launch: UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0
+Compile Env Launch: UE_MODULE_NAME="Launch"
+Compile Env Launch: UE_PLUGIN_NAME=""
+Enabling plugin 'PixelStreaming' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env PixelStreaming: UE_MODULE_NAME="PixelStreaming"
+Compile Env PixelStreaming: UE_PLUGIN_NAME="PixelStreaming"
+Compile Env PixelStreamingServers: UE_MODULE_NAME="PixelStreamingServers"
+Compile Env PixelStreamingServers: UE_PLUGIN_NAME="PixelStreaming"
+Compile Env PixelStreamingBlueprint: UE_MODULE_NAME="PixelStreamingBlueprint"
+Compile Env PixelStreamingBlueprint: UE_PLUGIN_NAME="PixelStreaming"
+Enabling plugin 'PixelCapture' (referenced via Proun_Pre_Alpha.uproject -> PixelStreaming.uplugin)
+Compile Env PixelCapture: UE_MODULE_NAME="PixelCapture"
+Compile Env PixelCapture: UE_PLUGIN_NAME="PixelCapture"
+Compile Env PixelCaptureShaders: UE_MODULE_NAME="PixelCaptureShaders"
+Compile Env PixelCaptureShaders: UE_PLUGIN_NAME="PixelCapture"
+Enabling plugin 'WmfMedia' (referenced via Proun_Pre_Alpha.uproject -> PixelStreaming.uplugin)
+Compile Env WmfMedia: WMFMEDIA_PLAYER_VERSION=2
+Compile Env WmfMedia: UE_MODULE_NAME="WmfMedia"
+Compile Env WmfMedia: UE_PLUGIN_NAME="WmfMedia"
+Compile Env WmfMediaFactory: UE_MODULE_NAME="WmfMediaFactory"
+Compile Env WmfMediaFactory: UE_PLUGIN_NAME="WmfMedia"
+Enabling plugin 'HardwareEncoders' (referenced via Proun_Pre_Alpha.uproject -> PixelStreaming.uplugin)
+Compile Env EncoderAMF: UE_MODULE_NAME="EncoderAMF"
+Compile Env EncoderAMF: UE_PLUGIN_NAME="HardwareEncoders"
+Compile Env EncoderNVENC: UE_MODULE_NAME="EncoderNVENC"
+Compile Env EncoderNVENC: UE_PLUGIN_NAME="HardwareEncoders"
+Enabling plugin 'WebSocketNetworking' (referenced via Proun_Pre_Alpha.uproject -> PixelStreaming.uplugin)
+Compile Env WebSocketNetworking: USE_LIBWEBSOCKET=1
+Compile Env WebSocketNetworking: UE_MODULE_NAME="WebSocketNetworking"
+Compile Env WebSocketNetworking: UE_PLUGIN_NAME="WebSocketNetworking"
+Enabling plugin 'DatasmithC4DImporter' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env DatasmithC4DTranslator: UE_MODULE_NAME="DatasmithC4DTranslator"
+Compile Env DatasmithC4DTranslator: UE_PLUGIN_NAME="DatasmithC4DImporter"
+Enabling plugin 'DatasmithImporter' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin)
+Compile Env DatasmithExternalSource: UE_MODULE_NAME="DatasmithExternalSource"
+Compile Env DatasmithExternalSource: UE_PLUGIN_NAME="DatasmithImporter"
+Compile Env DatasmithTranslator: UE_MODULE_NAME="DatasmithTranslator"
+Compile Env DatasmithTranslator: UE_PLUGIN_NAME="DatasmithImporter"
+Compile Env DatasmithNativeTranslator: UE_MODULE_NAME="DatasmithNativeTranslator"
+Compile Env DatasmithNativeTranslator: UE_PLUGIN_NAME="DatasmithImporter"
+Compile Env DirectLinkExtension: UE_MODULE_NAME="DirectLinkExtension"
+Compile Env DirectLinkExtension: UE_PLUGIN_NAME="DatasmithImporter"
+Compile Env ExternalSource: UE_MODULE_NAME="ExternalSource"
+Compile Env ExternalSource: UE_PLUGIN_NAME="DatasmithImporter"
+Compile Env DirectLinkTest: UE_MODULE_NAME="DirectLinkTest"
+Compile Env DirectLinkTest: UE_PLUGIN_NAME="DatasmithImporter"
+Enabling plugin 'DatasmithContent' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin -> DatasmithImporter.uplugin)
+Compile Env DatasmithContent: UE_MODULE_NAME="DatasmithContent"
+Compile Env DatasmithContent: UE_PLUGIN_NAME="DatasmithContent"
+Enabling plugin 'VariantManagerContent' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin -> DatasmithImporter.uplugin -> DatasmithContent.uplugin)
+Compile Env VariantManagerContent: UE_MODULE_NAME="VariantManagerContent"
+Compile Env VariantManagerContent: UE_PLUGIN_NAME="VariantManagerContent"
+Enabling plugin 'EditorScriptingUtilities' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin -> DatasmithImporter.uplugin)
+Enabling plugin 'DataPrepEditor' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin -> DatasmithImporter.uplugin)
+Enabling plugin 'InterchangeEditor' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin -> DatasmithImporter.uplugin)
+Ignoring plugin 'Interchange' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin -> DatasmithImporter.uplugin -> InterchangeEditor.uplugin), not enabled for target Game
+Enabling plugin 'VariantManager' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin -> DatasmithImporter.uplugin)
+Enabling plugin 'UdpMessaging' (referenced via Proun_Pre_Alpha.uproject -> DatasmithC4DImporter.uplugin -> DatasmithImporter.uplugin)
+Compile Env UdpMessaging: UE_MODULE_NAME="UdpMessaging"
+Compile Env UdpMessaging: UE_PLUGIN_NAME="UdpMessaging"
+Enabling plugin 'ModularGameplay' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env ModularGameplay: UE_MODULE_NAME="ModularGameplay"
+Compile Env ModularGameplay: UE_PLUGIN_NAME="ModularGameplay"
+Enabling plugin 'GameFeatures' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env GameFeatures: UE_MODULE_NAME="GameFeatures"
+Compile Env GameFeatures: UE_PLUGIN_NAME="GameFeatures"
+Enabling plugin 'DataRegistry' (referenced via Proun_Pre_Alpha.uproject -> GameFeatures.uplugin)
+Compile Env DataRegistry: UE_MODULE_NAME="DataRegistry"
+Compile Env DataRegistry: UE_PLUGIN_NAME="DataRegistry"
+Enabling plugin 'GameplayTagsEditor' (referenced via Proun_Pre_Alpha.uproject -> GameFeatures.uplugin -> DataRegistry.uplugin)
+Enabling plugin 'AssetManagerEditor' (referenced via Proun_Pre_Alpha.uproject -> GameFeatures.uplugin -> DataRegistry.uplugin)
+Enabling plugin 'AssetReferenceRestrictions' (referenced via Proun_Pre_Alpha.uproject -> GameFeatures.uplugin)
+Enabling plugin 'DataValidation' (referenced via Proun_Pre_Alpha.uproject -> GameFeatures.uplugin -> AssetReferenceRestrictions.uplugin)
+Ignoring plugin 'PluginUtils' (referenced via Proun_Pre_Alpha.uproject -> GameFeatures.uplugin), not enabled for target Game
+Enabling plugin 'GameplayAbilities' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env GameplayAbilities: WITH_GAMEPLAY_DEBUGGER=1
+Compile Env GameplayAbilities: UE_WITH_IRIS=0
+Compile Env GameplayAbilities: UE_MODULE_NAME="GameplayAbilities"
+Compile Env GameplayAbilities: UE_PLUGIN_NAME="GameplayAbilities"
+Enabling plugin 'Niagara' (referenced via Proun_Pre_Alpha.uproject -> GameplayAbilities.uplugin)
+Compile Env NiagaraCore: UE_MODULE_NAME="NiagaraCore"
+Compile Env NiagaraCore: UE_PLUGIN_NAME="Niagara"
+Compile Env Niagara: VECTORVM_SUPPORTS_EXPERIMENTAL=1
+Compile Env Niagara: VECTORVM_SUPPORTS_LEGACY=1
+Compile Env Niagara: UE_MODULE_NAME="Niagara"
+Compile Env Niagara: UE_PLUGIN_NAME="Niagara"
+Compile Env NiagaraAnimNotifies: UE_MODULE_NAME="NiagaraAnimNotifies"
+Compile Env NiagaraAnimNotifies: UE_PLUGIN_NAME="Niagara"
+Compile Env NiagaraShader: UE_MODULE_NAME="NiagaraShader"
+Compile Env NiagaraShader: UE_PLUGIN_NAME="Niagara"
+Compile Env NiagaraVertexFactories: UE_MODULE_NAME="NiagaraVertexFactories"
+Compile Env NiagaraVertexFactories: UE_PLUGIN_NAME="Niagara"
+Enabling plugin 'PythonScriptPlugin' (referenced via Proun_Pre_Alpha.uproject -> GameplayAbilities.uplugin -> Niagara.uplugin)
+Compile Env PythonScriptPluginPreload: WITH_PYTHON=0
+Compile Env PythonScriptPluginPreload: UE_MODULE_NAME="PythonScriptPluginPreload"
+Compile Env PythonScriptPluginPreload: UE_PLUGIN_NAME="PythonScriptPlugin"
+Ignoring plugin 'ContentBrowserFileDataSource' (referenced via Proun_Pre_Alpha.uproject -> GameplayAbilities.uplugin -> Niagara.uplugin -> PythonScriptPlugin.uplugin), not enabled for target Game
+Enabling plugin 'Magic1' (referenced via Proun_Pre_Alpha.uproject)
+Enabling plugin 'AbilitySystemGameFeatureActions' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env AbilitySystemGameFeatureActions: UE_MODULE_NAME="AbilitySystemGameFeatureActions"
+Compile Env AbilitySystemGameFeatureActions: UE_PLUGIN_NAME="AbilitySystemGameFeatureActions"
+Enabling plugin 'HairModelingToolset' (referenced via Proun_Pre_Alpha.uproject)
+Enabling plugin 'GeometryProcessing' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin)
+Compile Env GeometryAlgorithms: UE_MODULE_NAME="GeometryAlgorithms"
+Compile Env GeometryAlgorithms: UE_PLUGIN_NAME="GeometryProcessing"
+Compile Env DynamicMesh: UE_MODULE_NAME="DynamicMesh"
+Compile Env DynamicMesh: UE_PLUGIN_NAME="GeometryProcessing"
+Ignoring plugin 'MeshModelingToolset' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin), not enabled for target Game
+Enabling plugin 'ModelingToolsEditorMode' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin)
+Ignoring plugin 'MeshModelingToolset' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin -> ModelingToolsEditorMode.uplugin), not enabled for target Game
+Ignoring plugin 'MeshModelingToolsetExp' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin -> ModelingToolsEditorMode.uplugin), not enabled for target Game
+Ignoring plugin 'MeshLODToolset' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin -> ModelingToolsEditorMode.uplugin), not enabled for target Game
+Enabling plugin 'StylusInput' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin -> ModelingToolsEditorMode.uplugin)
+Enabling plugin 'HairStrands' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin)
+Compile Env HairStrandsCore: UE_MODULE_NAME="HairStrandsCore"
+Compile Env HairStrandsCore: UE_PLUGIN_NAME="HairStrands"
+Compile Env HairStrandsRuntime: UE_MODULE_NAME="HairStrandsRuntime"
+Compile Env HairStrandsRuntime: UE_PLUGIN_NAME="HairStrands"
+Enabling plugin 'GeometryCache' (referenced via Proun_Pre_Alpha.uproject -> HairModelingToolset.uplugin -> HairStrands.uplugin)
+Compile Env GeometryCache: UE_MODULE_NAME="GeometryCache"
+Compile Env GeometryCache: UE_PLUGIN_NAME="GeometryCache"
+Compile Env GeometryCacheTracks: UE_MODULE_NAME="GeometryCacheTracks"
+Compile Env GeometryCacheTracks: UE_PLUGIN_NAME="GeometryCache"
+Enabling plugin 'AppleProResMedia' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env AppleProResMedia: UE_MODULE_NAME="AppleProResMedia"
+Compile Env AppleProResMedia: UE_PLUGIN_NAME="AppleProResMedia"
+Enabling plugin 'MovieRenderPipeline' (referenced via Proun_Pre_Alpha.uproject -> AppleProResMedia.uplugin)
+Compile Env MovieRenderPipelineCore: UE_MODULE_NAME="MovieRenderPipelineCore"
+Compile Env MovieRenderPipelineCore: UE_PLUGIN_NAME="MovieRenderPipeline"
+Compile Env MovieRenderPipelineSettings: UE_MODULE_NAME="MovieRenderPipelineSettings"
+Compile Env MovieRenderPipelineSettings: UE_PLUGIN_NAME="MovieRenderPipeline"
+Compile Env MovieRenderPipelineRenderPasses: UE_MODULE_NAME="MovieRenderPipelineRenderPasses"
+Compile Env MovieRenderPipelineRenderPasses: UE_PLUGIN_NAME="MovieRenderPipeline"
+Compile Env UEOpenExrRTTI: UE_MODULE_NAME="UEOpenExrRTTI"
+Compile Env UEOpenExrRTTI: UE_PLUGIN_NAME="MovieRenderPipeline"
+Enabling plugin 'ActorLayerUtilities' (referenced via Proun_Pre_Alpha.uproject -> AppleProResMedia.uplugin -> MovieRenderPipeline.uplugin)
+Compile Env ActorLayerUtilities: UE_MODULE_NAME="ActorLayerUtilities"
+Compile Env ActorLayerUtilities: UE_PLUGIN_NAME="ActorLayerUtilities"
+Enabling plugin 'LevelSequenceEditor' (referenced via Proun_Pre_Alpha.uproject -> AppleProResMedia.uplugin -> MovieRenderPipeline.uplugin)
+Enabling plugin 'SequencerScripting' (referenced via Proun_Pre_Alpha.uproject -> AppleProResMedia.uplugin -> MovieRenderPipeline.uplugin -> LevelSequenceEditor.uplugin)
+Compile Env SequencerScripting: UE_MODULE_NAME="SequencerScripting"
+Compile Env SequencerScripting: UE_PLUGIN_NAME="SequencerScripting"
+Enabling plugin 'OpenColorIO' (referenced via Proun_Pre_Alpha.uproject -> AppleProResMedia.uplugin -> MovieRenderPipeline.uplugin)
+Compile Env OpenColorIO: UE_MODULE_NAME="OpenColorIO"
+Compile Env OpenColorIO: UE_PLUGIN_NAME="OpenColorIO"
+Enabling plugin 'PlayFab' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env PlayFabCpp: UE_MODULE_NAME="PlayFabCpp"
+Compile Env PlayFabCpp: UE_PLUGIN_NAME="PlayFab"
+Compile Env PlayFab: UE_MODULE_NAME="PlayFab"
+Compile Env PlayFab: UE_PLUGIN_NAME="PlayFab"
+Compile Env PlayFabCommon: ENGINE_MAJOR_VERSION=5
+Compile Env PlayFabCommon: ENGINE_MINOR_VERSION=1
+Compile Env PlayFabCommon: UE_MODULE_NAME="PlayFabCommon"
+Compile Env PlayFabCommon: UE_PLUGIN_NAME="PlayFab"
+Enabling plugin 'BinkMedia' (referenced via Proun_Pre_Alpha.uproject)
+Compile Env BinkMediaPlayer: BINKPLUGIN_UE4_EDITOR=0
+Compile Env BinkMediaPlayer: UE_MODULE_NAME="BinkMediaPlayer"
+Compile Env BinkMediaPlayer: UE_PLUGIN_NAME="BinkMedia"
+Enabling plugin 'Paper2D' (referenced via default plugins)
+Compile Env Paper2D: UE_MODULE_NAME="Paper2D"
+Compile Env Paper2D: UE_PLUGIN_NAME="Paper2D"
+Enabling plugin 'AISupport' (referenced via default plugins)
+Compile Env AISupportModule: UE_MODULE_NAME="AISupportModule"
+Compile Env AISupportModule: UE_PLUGIN_NAME="AISupport"
+Enabling plugin 'EnvironmentQueryEditor' (referenced via default plugins)
+Enabling plugin 'AnimationModifierLibrary' (referenced via default plugins)
+Enabling plugin 'BlendSpaceMotionAnalysis' (referenced via default plugins)
+Enabling plugin 'ControlRigSpline' (referenced via default plugins)
+Compile Env ControlRigSpline: UE_MODULE_NAME="ControlRigSpline"
+Compile Env ControlRigSpline: UE_PLUGIN_NAME="ControlRigSpline"
+Enabling plugin 'ControlRig' (referenced via default plugins -> ControlRigSpline.uplugin)
+Compile Env ControlRig: UE_MODULE_NAME="ControlRig"
+Compile Env ControlRig: UE_PLUGIN_NAME="ControlRig"
+Enabling plugin 'PropertyAccessEditor' (referenced via default plugins -> ControlRigSpline.uplugin -> ControlRig.uplugin)
+Enabling plugin 'IKRig' (referenced via default plugins)
+Compile Env IKRig: UE_MODULE_NAME="IKRig"
+Compile Env IKRig: UE_PLUGIN_NAME="IKRig"
+Enabling plugin 'FullBodyIK' (referenced via default plugins -> IKRig.uplugin)
+Compile Env FullBodyIK: UE_MODULE_NAME="FullBodyIK"
+Compile Env FullBodyIK: UE_PLUGIN_NAME="FullBodyIK"
+Compile Env PBIK: UE_MODULE_NAME="PBIK"
+Compile Env PBIK: UE_PLUGIN_NAME="FullBodyIK"
+Enabling plugin 'Bridge' (referenced via default plugins)
+Enabling plugin 'CameraShakePreviewer' (referenced via default plugins)
+Enabling plugin 'GameplayCameras' (referenced via default plugins -> CameraShakePreviewer.uplugin)
+Compile Env GameplayCameras: UE_MODULE_NAME="GameplayCameras"
+Compile Env GameplayCameras: UE_PLUGIN_NAME="GameplayCameras"
+Enabling plugin 'TemplateSequence' (referenced via default plugins -> CameraShakePreviewer.uplugin -> GameplayCameras.uplugin)
+Compile Env TemplateSequence: UE_MODULE_NAME="TemplateSequence"
+Compile Env TemplateSequence: UE_PLUGIN_NAME="TemplateSequence"
+Enabling plugin 'OodleNetwork' (referenced via default plugins)
+Compile Env OodleNetworkHandlerComponent: UE_MODULE_NAME="OodleNetworkHandlerComponent"
+Compile Env OodleNetworkHandlerComponent: UE_PLUGIN_NAME="OodleNetwork"
+Enabling plugin 'AnimationSharing' (referenced via default plugins)
+Compile Env AnimationSharing: UE_MODULE_NAME="AnimationSharing"
+Compile Env AnimationSharing: UE_PLUGIN_NAME="AnimationSharing"
+Enabling plugin 'SignificanceManager' (referenced via default plugins -> AnimationSharing.uplugin)
+Compile Env SignificanceManager: UE_MODULE_NAME="SignificanceManager"
+Compile Env SignificanceManager: UE_PLUGIN_NAME="SignificanceManager"
+Enabling plugin 'CLionSourceCodeAccess' (referenced via default plugins)
+Enabling plugin 'CodeLiteSourceCodeAccess' (referenced via default plugins)
+Enabling plugin 'DumpGPUServices' (referenced via default plugins)
+Compile Env DumpGPUServices: UE_MODULE_NAME="DumpGPUServices"
+Compile Env DumpGPUServices: UE_PLUGIN_NAME="DumpGPUServices"
+Enabling plugin 'GitSourceControl' (referenced via default plugins)
+Enabling plugin 'KDevelopSourceCodeAccess' (referenced via default plugins)
+Enabling plugin 'NullSourceCodeAccess' (referenced via default plugins)
+Enabling plugin 'PerforceSourceControl' (referenced via default plugins)
+Enabling plugin 'PixWinPlugin' (referenced via default plugins)
+Compile Env PixWinPlugin: UE_MODULE_NAME="PixWinPlugin"
+Compile Env PixWinPlugin: UE_PLUGIN_NAME="PixWinPlugin"
+Enabling plugin 'PlasticSourceControl' (referenced via default plugins)
+Enabling plugin 'PluginUtils' (referenced via default plugins)
+Enabling plugin 'PropertyAccessNode' (referenced via default plugins)
+Enabling plugin 'RiderSourceCodeAccess' (referenced via default plugins)
+Enabling plugin 'SubversionSourceControl' (referenced via default plugins)
+Enabling plugin 'TextureFormatOodle' (referenced via default plugins)
+Enabling plugin 'TraceDataFilters' (referenced via default plugins)
+Enabling plugin 'UObjectPlugin' (referenced via default plugins)
+Compile Env UObjectPlugin: UE_MODULE_NAME="UObjectPlugin"
+Compile Env UObjectPlugin: UE_PLUGIN_NAME="UObjectPlugin"
+Enabling plugin 'VisualStudioCodeSourceCodeAccess' (referenced via default plugins)
+Enabling plugin 'VisualStudioSourceCodeAccess' (referenced via default plugins)
+Ignoring plugin 'XCodeSourceCodeAccess' (referenced via default plugins) due to unsupported target platform.
+Enabling plugin 'BlueprintHeaderView' (referenced via default plugins)
+Enabling plugin 'ContentBrowserAssetDataSource' (referenced via default plugins)
+Enabling plugin 'ContentBrowserClassDataSource' (referenced via default plugins)
+Enabling plugin 'CryptoKeys' (referenced via default plugins)
+Enabling plugin 'CurveEditorTools' (referenced via default plugins)
+Enabling plugin 'EditorDebugTools' (referenced via default plugins)
+Enabling plugin 'FacialAnimation' (referenced via default plugins)
+Compile Env FacialAnimation: UE_MODULE_NAME="FacialAnimation"
+Compile Env FacialAnimation: UE_PLUGIN_NAME="FacialAnimation"
+Enabling plugin 'GeometryMode' (referenced via default plugins)
+Enabling plugin 'MacGraphicsSwitching' (referenced via default plugins)
+Enabling plugin 'MaterialAnalyzer' (referenced via default plugins)
+Enabling plugin 'MobileLauncherProfileWizard' (referenced via default plugins)
+Enabling plugin 'LightMixer' (referenced via default plugins)
+Enabling plugin 'ObjectMixer' (referenced via default plugins -> LightMixer.uplugin)
+Enabling plugin 'PluginBrowser' (referenced via default plugins)
+Enabling plugin 'SequencerAnimTools' (referenced via default plugins)
+Enabling plugin 'SpeedTreeImporter' (referenced via default plugins)
+Enabling plugin 'WorldPartitionHLODUtilities' (referenced via default plugins)
+Enabling plugin 'EnhancedInput' (referenced via default plugins)
+Compile Env EnhancedInput: UE_MODULE_NAME="EnhancedInput"
+Compile Env EnhancedInput: UE_PLUGIN_NAME="EnhancedInput"
+Enabling plugin 'GLTFExporter' (referenced via default plugins)
+Compile Env GLTFExporter: UE_MODULE_NAME="GLTFExporter"
+Compile Env GLTFExporter: UE_PLUGIN_NAME="GLTFExporter"
+Enabling plugin 'AutomationUtils' (referenced via default plugins)
+Compile Env AutomationUtils: UE_MODULE_NAME="AutomationUtils"
+Compile Env AutomationUtils: UE_PLUGIN_NAME="AutomationUtils"
+Enabling plugin 'BackChannel' (referenced via default plugins)
+Compile Env BackChannel: UE_MODULE_NAME="BackChannel"
+Compile Env BackChannel: UE_PLUGIN_NAME="BackChannel"
+Enabling plugin 'ChaosClothEditor' (referenced via default plugins)
+Enabling plugin 'ChaosCloth' (referenced via default plugins -> ChaosClothEditor.uplugin)
+Compile Env ChaosCloth: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env ChaosCloth: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ChaosCloth: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ChaosCloth: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env ChaosCloth: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env ChaosCloth: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env ChaosCloth: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env ChaosCloth: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ChaosCloth: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env ChaosCloth: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env ChaosCloth: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env ChaosCloth: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ChaosCloth: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env ChaosCloth: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env ChaosCloth: UE_MODULE_NAME="ChaosCloth"
+Compile Env ChaosCloth: UE_PLUGIN_NAME="ChaosCloth"
+Enabling plugin 'ChaosCaching' (referenced via default plugins -> ChaosClothEditor.uplugin -> ChaosCloth.uplugin)
+Compile Env ChaosCaching: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env ChaosCaching: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ChaosCaching: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ChaosCaching: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env ChaosCaching: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env ChaosCaching: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env ChaosCaching: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env ChaosCaching: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ChaosCaching: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env ChaosCaching: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env ChaosCaching: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env ChaosCaching: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ChaosCaching: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env ChaosCaching: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env ChaosCaching: UE_MODULE_NAME="ChaosCaching"
+Compile Env ChaosCaching: UE_PLUGIN_NAME="ChaosCaching"
+Enabling plugin 'Takes' (referenced via default plugins -> ChaosClothEditor.uplugin -> ChaosCloth.uplugin -> ChaosCaching.uplugin)
+Compile Env TakeMovieScene: UE_MODULE_NAME="TakeMovieScene"
+Compile Env TakeMovieScene: UE_PLUGIN_NAME="Takes"
+Enabling plugin 'ChaosEditor' (referenced via default plugins)
+Ignoring plugin 'PlanarCut' (referenced via default plugins -> ChaosEditor.uplugin), not enabled for target Game
+Enabling plugin 'GeometryCollectionPlugin' (referenced via default plugins -> ChaosEditor.uplugin)
+Compile Env GeometryCollectionTracks: UE_MODULE_NAME="GeometryCollectionTracks"
+Compile Env GeometryCollectionTracks: UE_PLUGIN_NAME="GeometryCollectionPlugin"
+Compile Env GeometryCollectionNodes: UE_MODULE_NAME="GeometryCollectionNodes"
+Compile Env GeometryCollectionNodes: UE_PLUGIN_NAME="GeometryCollectionPlugin"
+Enabling plugin 'ProceduralMeshComponent' (referenced via default plugins -> ChaosEditor.uplugin -> GeometryCollectionPlugin.uplugin)
+Compile Env ProceduralMeshComponent: UE_MODULE_NAME="ProceduralMeshComponent"
+Compile Env ProceduralMeshComponent: UE_PLUGIN_NAME="ProceduralMeshComponent"
+Enabling plugin 'ChaosSolverPlugin' (referenced via default plugins -> ChaosEditor.uplugin -> GeometryCollectionPlugin.uplugin)
+Enabling plugin 'Dataflow' (referenced via default plugins -> ChaosEditor.uplugin -> GeometryCollectionPlugin.uplugin)
+Compile Env DataflowNodes: UE_MODULE_NAME="DataflowNodes"
+Compile Env DataflowNodes: UE_PLUGIN_NAME="Dataflow"
+Enabling plugin 'PlanarCut' (referenced via default plugins -> ChaosEditor.uplugin -> GeometryCollectionPlugin.uplugin)
+Compile Env PlanarCut: UE_MODULE_NAME="PlanarCut"
+Compile Env PlanarCut: UE_PLUGIN_NAME="PlanarCut"
+Ignoring plugin 'MeshModelingToolsetExp' (referenced via default plugins -> ChaosEditor.uplugin), not enabled for target Game
+Enabling plugin 'ChaosNiagara' (referenced via default plugins)
+Compile Env ChaosNiagara: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env ChaosNiagara: UE_MODULE_NAME="ChaosNiagara"
+Compile Env ChaosNiagara: UE_PLUGIN_NAME="ChaosNiagara"
+Enabling plugin 'ChaosUserDataPT' (referenced via default plugins)
+Compile Env ChaosUserDataPT: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env ChaosUserDataPT: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ChaosUserDataPT: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ChaosUserDataPT: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env ChaosUserDataPT: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env ChaosUserDataPT: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env ChaosUserDataPT: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env ChaosUserDataPT: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ChaosUserDataPT: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env ChaosUserDataPT: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env ChaosUserDataPT: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env ChaosUserDataPT: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ChaosUserDataPT: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env ChaosUserDataPT: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env ChaosUserDataPT: UE_MODULE_NAME="ChaosUserDataPT"
+Compile Env ChaosUserDataPT: UE_PLUGIN_NAME="ChaosUserDataPT"
+Enabling plugin 'CharacterAI' (referenced via default plugins)
+Compile Env CharacterAI: UE_MODULE_NAME="CharacterAI"
+Compile Env CharacterAI: UE_PLUGIN_NAME="CharacterAI"
+Enabling plugin 'Iris' (referenced via default plugins)
+Compile Env Iris: UE_WITH_IRIS=0
+Compile Env Iris: UE_MODULE_NAME="Iris"
+Compile Env Iris: UE_PLUGIN_NAME="Iris"
+Enabling plugin 'OpenImageDenoise' (referenced via default plugins)
+Compile Env OpenImageDenoise: UE_MODULE_NAME="OpenImageDenoise"
+Compile Env OpenImageDenoise: UE_PLUGIN_NAME="OpenImageDenoise"
+Enabling plugin 'PlatformCrypto' (referenced via default plugins)
+Compile Env PlatformCrypto: PLATFORM_ENCRYPTION_CONTEXT_HEADER="EncryptionContextOpenSSL.h"
+Compile Env PlatformCrypto: UE_MODULE_NAME="PlatformCrypto"
+Compile Env PlatformCrypto: UE_PLUGIN_NAME="PlatformCrypto"
+Compile Env PlatformCryptoTypes: UE_MODULE_NAME="PlatformCryptoTypes"
+Compile Env PlatformCryptoTypes: UE_PLUGIN_NAME="PlatformCrypto"
+Compile Env PlatformCryptoOpenSSL: UE_MODULE_NAME="PlatformCryptoOpenSSL"
+Compile Env PlatformCryptoOpenSSL: UE_PLUGIN_NAME="PlatformCrypto"
+Enabling plugin 'SkeletalReduction' (referenced via default plugins)
+Enabling plugin 'UVEditor' (referenced via default plugins)
+Ignoring plugin 'MeshModelingToolset' (referenced via default plugins -> UVEditor.uplugin), not enabled for target Game
+Ignoring plugin 'MeshModelingToolsetExp' (referenced via default plugins -> UVEditor.uplugin), not enabled for target Game
+Enabling plugin 'FastBuildController' (referenced via default plugins)
+Enabling plugin 'AlembicImporter' (referenced via default plugins)
+Enabling plugin 'AndroidMedia' (referenced via default plugins)
+Enabling plugin 'AvfMedia' (referenced via default plugins)
+Compile Env AvfMediaFactory: UE_MODULE_NAME="AvfMediaFactory"
+Compile Env AvfMediaFactory: UE_PLUGIN_NAME="AvfMedia"
+Enabling plugin 'ImgMedia' (referenced via default plugins)
+Compile Env ImgMedia: UE_MODULE_NAME="ImgMedia"
+Compile Env ImgMedia: UE_PLUGIN_NAME="ImgMedia"
+Compile Env ImgMediaEngine: UE_MODULE_NAME="ImgMediaEngine"
+Compile Env ImgMediaEngine: UE_PLUGIN_NAME="ImgMedia"
+Compile Env ImgMediaFactory: UE_MODULE_NAME="ImgMediaFactory"
+Compile Env ImgMediaFactory: UE_PLUGIN_NAME="ImgMedia"
+Compile Env OpenExrWrapper: UE_MODULE_NAME="OpenExrWrapper"
+Compile Env OpenExrWrapper: UE_PLUGIN_NAME="ImgMedia"
+Compile Env ExrReaderGpu: UE_MODULE_NAME="ExrReaderGpu"
+Compile Env ExrReaderGpu: UE_PLUGIN_NAME="ImgMedia"
+Enabling plugin 'MediaCompositing' (referenced via default plugins)
+Compile Env MediaCompositing: UE_MODULE_NAME="MediaCompositing"
+Compile Env MediaCompositing: UE_PLUGIN_NAME="MediaCompositing"
+Enabling plugin 'MediaPlate' (referenced via default plugins)
+Compile Env MediaPlate: UE_MODULE_NAME="MediaPlate"
+Compile Env MediaPlate: UE_PLUGIN_NAME="MediaPlate"
+Ignoring plugin 'MediaPlayerEditor' (referenced via default plugins -> MediaPlate.uplugin), not enabled for target Game
+Ignoring plugin 'MeshModelingToolset' (referenced via default plugins -> MediaPlate.uplugin), not enabled for target Game
+Enabling plugin 'MediaPlayerEditor' (referenced via default plugins)
+Enabling plugin 'MeshPainting' (referenced via default plugins)
+Enabling plugin 'TcpMessaging' (referenced via default plugins)
+Compile Env TcpMessaging: UE_MODULE_NAME="TcpMessaging"
+Compile Env TcpMessaging: UE_PLUGIN_NAME="TcpMessaging"
+Enabling plugin 'ActorSequence' (referenced via default plugins)
+Compile Env ActorSequence: UE_MODULE_NAME="ActorSequence"
+Compile Env ActorSequence: UE_PLUGIN_NAME="ActorSequence"
+Ignoring plugin 'OnlineSubsystemGooglePlay' (referenced via default plugins) due to unsupported target platform.
+Ignoring plugin 'OnlineSubsystemIOS' (referenced via default plugins) due to unsupported target platform.
+Enabling plugin 'OnlineBase' (referenced via default plugins)
+Compile Env OnlineBase: UE_MODULE_NAME="OnlineBase"
+Compile Env OnlineBase: UE_PLUGIN_NAME="OnlineBase"
+Enabling plugin 'OnlineSubsystemNull' (referenced via default plugins)
+Compile Env OnlineSubsystemNull: ONLINESUBSYSTEMNULL_PACKAGE=1
+Compile Env OnlineSubsystemNull: UE_MODULE_NAME="OnlineSubsystemNull"
+Compile Env OnlineSubsystemNull: UE_PLUGIN_NAME="OnlineSubsystemNull"
+Enabling plugin 'OnlineSubsystem' (referenced via default plugins -> OnlineSubsystemNull.uplugin)
+Compile Env OnlineSubsystem: ONLINESUBSYSTEM_PACKAGE=1
+Compile Env OnlineSubsystem: DEBUG_LAN_BEACON=0
+Compile Env OnlineSubsystem: UE_MODULE_NAME="OnlineSubsystem"
+Compile Env OnlineSubsystem: UE_PLUGIN_NAME="OnlineSubsystem"
+Enabling plugin 'OnlineSubsystemUtils' (referenced via default plugins -> OnlineSubsystemNull.uplugin)
+Compile Env OnlineSubsystemUtils: ONLINESUBSYSTEMUTILS_PACKAGE=1
+Compile Env OnlineSubsystemUtils: UE_MODULE_NAME="OnlineSubsystemUtils"
+Compile Env OnlineSubsystemUtils: UE_PLUGIN_NAME="OnlineSubsystemUtils"
+Enabling plugin 'OnlineServices' (referenced via default plugins -> OnlineSubsystemNull.uplugin -> OnlineSubsystemUtils.uplugin)
+Compile Env OnlineServicesInterface: UE_MODULE_NAME="OnlineServicesInterface"
+Compile Env OnlineServicesInterface: UE_PLUGIN_NAME="OnlineServices"
+Compile Env OnlineServicesCommon: UE_MODULE_NAME="OnlineServicesCommon"
+Compile Env OnlineServicesCommon: UE_PLUGIN_NAME="OnlineServices"
+Compile Env OnlineServicesCommonEngineUtils: UE_MODULE_NAME="OnlineServicesCommonEngineUtils"
+Compile Env OnlineServicesCommonEngineUtils: UE_PLUGIN_NAME="OnlineServices"
+Enabling plugin 'LauncherChunkInstaller' (referenced via default plugins)
+Compile Env LauncherChunkInstaller: UE_MODULE_NAME="LauncherChunkInstaller"
+Compile Env LauncherChunkInstaller: UE_PLUGIN_NAME="LauncherChunkInstaller"
+Enabling plugin 'AndroidDeviceProfileSelector' (referenced via default plugins)
+Enabling plugin 'AndroidFileServer' (referenced via default plugins)
+Compile Env AndroidFileServer: UE_MODULE_NAME="AndroidFileServer"
+Compile Env AndroidFileServer: UE_PLUGIN_NAME="AndroidFileServer"
+Enabling plugin 'AndroidMoviePlayer' (referenced via default plugins)
+Enabling plugin 'AndroidPermission' (referenced via default plugins)
+Compile Env AndroidPermission: UE_MODULE_NAME="AndroidPermission"
+Compile Env AndroidPermission: UE_PLUGIN_NAME="AndroidPermission"
+Enabling plugin 'AppleImageUtils' (referenced via default plugins)
+Compile Env AppleImageUtils: UE_MODULE_NAME="AppleImageUtils"
+Compile Env AppleImageUtils: UE_PLUGIN_NAME="AppleImageUtils"
+Enabling plugin 'AppleMoviePlayer' (referenced via default plugins)
+Enabling plugin 'ArchVisCharacter' (referenced via default plugins)
+Compile Env ArchVisCharacter: UE_MODULE_NAME="ArchVisCharacter"
+Compile Env ArchVisCharacter: UE_PLUGIN_NAME="ArchVisCharacter"
+Enabling plugin 'AssetTags' (referenced via default plugins)
+Compile Env AssetTags: UE_MODULE_NAME="AssetTags"
+Compile Env AssetTags: UE_PLUGIN_NAME="AssetTags"
+Enabling plugin 'AudioCapture' (referenced via default plugins)
+Compile Env AudioCapture: UE_MODULE_NAME="AudioCapture"
+Compile Env AudioCapture: UE_PLUGIN_NAME="AudioCapture"
+Enabling plugin 'CableComponent' (referenced via default plugins)
+Compile Env CableComponent: UE_MODULE_NAME="CableComponent"
+Compile Env CableComponent: UE_PLUGIN_NAME="CableComponent"
+Enabling plugin 'ChunkDownloader' (referenced via default plugins)
+Compile Env ChunkDownloader: UE_MODULE_NAME="ChunkDownloader"
+Compile Env ChunkDownloader: UE_PLUGIN_NAME="ChunkDownloader"
+Enabling plugin 'CustomMeshComponent' (referenced via default plugins)
+Compile Env CustomMeshComponent: UE_MODULE_NAME="CustomMeshComponent"
+Compile Env CustomMeshComponent: UE_PLUGIN_NAME="CustomMeshComponent"
+Enabling plugin 'ExampleDeviceProfileSelector' (referenced via default plugins)
+Compile Env ExampleDeviceProfileSelector: UE_MODULE_NAME="ExampleDeviceProfileSelector"
+Compile Env ExampleDeviceProfileSelector: UE_PLUGIN_NAME="ExampleDeviceProfileSelector"
+Enabling plugin 'GoogleCloudMessaging' (referenced via default plugins)
+Enabling plugin 'GooglePAD' (referenced via default plugins)
+Compile Env GooglePAD: UE_MODULE_NAME="GooglePAD"
+Compile Env GooglePAD: UE_PLUGIN_NAME="GooglePAD"
+Enabling plugin 'InputDebugging' (referenced via default plugins)
+Compile Env InputDebugging: UE_MODULE_NAME="InputDebugging"
+Compile Env InputDebugging: UE_PLUGIN_NAME="InputDebugging"
+Enabling plugin 'IOSDeviceProfileSelector' (referenced via default plugins)
+Enabling plugin 'LinuxDeviceProfileSelector' (referenced via default plugins)
+Enabling plugin 'LocationServicesBPLibrary' (referenced via default plugins)
+Compile Env LocationServicesBPLibrary: UE_MODULE_NAME="LocationServicesBPLibrary"
+Compile Env LocationServicesBPLibrary: UE_PLUGIN_NAME="LocationServicesBPLibrary"
+Enabling plugin 'Metasound' (referenced via default plugins)
+Compile Env MetasoundGraphCore: UE_MODULE_NAME="MetasoundGraphCore"
+Compile Env MetasoundGraphCore: UE_PLUGIN_NAME="Metasound"
+Compile Env MetasoundGenerator: UE_MODULE_NAME="MetasoundGenerator"
+Compile Env MetasoundGenerator: UE_PLUGIN_NAME="Metasound"
+Compile Env MetasoundFrontend: WITH_METASOUND_FRONTEND=1
+Compile Env MetasoundFrontend: UE_MODULE_NAME="MetasoundFrontend"
+Compile Env MetasoundFrontend: UE_PLUGIN_NAME="Metasound"
+Compile Env MetasoundStandardNodes: UE_MODULE_NAME="MetasoundStandardNodes"
+Compile Env MetasoundStandardNodes: UE_PLUGIN_NAME="Metasound"
+Compile Env MetasoundEngine: UE_MODULE_NAME="MetasoundEngine"
+Compile Env MetasoundEngine: UE_PLUGIN_NAME="Metasound"
+Compile Env MetasoundEngineTest: UE_MODULE_NAME="MetasoundEngineTest"
+Compile Env MetasoundEngineTest: UE_PLUGIN_NAME="Metasound"
+Enabling plugin 'AudioWidgets' (referenced via default plugins -> Metasound.uplugin)
+Compile Env AudioWidgets: UE_MODULE_NAME="AudioWidgets"
+Compile Env AudioWidgets: UE_PLUGIN_NAME="AudioWidgets"
+Enabling plugin 'AudioSynesthesia' (referenced via default plugins -> Metasound.uplugin)
+Compile Env AudioSynesthesiaCore: UE_MODULE_NAME="AudioSynesthesiaCore"
+Compile Env AudioSynesthesiaCore: UE_PLUGIN_NAME="AudioSynesthesia"
+Compile Env AudioSynesthesia: UE_MODULE_NAME="AudioSynesthesia"
+Compile Env AudioSynesthesia: UE_PLUGIN_NAME="AudioSynesthesia"
+Enabling plugin 'WaveTable' (referenced via default plugins -> Metasound.uplugin)
+Compile Env WaveTable: UE_MODULE_NAME="WaveTable"
+Compile Env WaveTable: UE_PLUGIN_NAME="WaveTable"
+Enabling plugin 'MobilePatchingUtils' (referenced via default plugins)
+Compile Env MobilePatchingUtils: UE_MODULE_NAME="MobilePatchingUtils"
+Compile Env MobilePatchingUtils: UE_PLUGIN_NAME="MobilePatchingUtils"
+Enabling plugin 'ResonanceAudio' (referenced via default plugins)
+Compile Env ResonanceAudio: SUPPORTS_PROCEDURAL_MESH=1
+Compile Env ResonanceAudio: UE_MODULE_NAME="ResonanceAudio"
+Compile Env ResonanceAudio: UE_PLUGIN_NAME="ResonanceAudio"
+Enabling plugin 'SoundFields' (referenced via default plugins)
+Compile Env SoundFields: UE_MODULE_NAME="SoundFields"
+Compile Env SoundFields: UE_PLUGIN_NAME="SoundFields"
+Enabling plugin 'Synthesis' (referenced via default plugins)
+Compile Env Synthesis: UE_MODULE_NAME="Synthesis"
+Compile Env Synthesis: UE_PLUGIN_NAME="Synthesis"
+Enabling plugin 'WebMMoviePlayer' (referenced via default plugins)
+Compile Env WebMMoviePlayer: WITH_WEBM_LIBS=1
+Compile Env WebMMoviePlayer: UE_MODULE_NAME="WebMMoviePlayer"
+Compile Env WebMMoviePlayer: UE_PLUGIN_NAME="WebMMoviePlayer"
+Enabling plugin 'WebMMedia' (referenced via default plugins -> WebMMoviePlayer.uplugin)
+Compile Env WebMMedia: WITH_WEBM_LIBS=1
+Compile Env WebMMedia: UE_MODULE_NAME="WebMMedia"
+Compile Env WebMMedia: UE_PLUGIN_NAME="WebMMedia"
+Compile Env WebMMediaFactory: UE_MODULE_NAME="WebMMediaFactory"
+Compile Env WebMMediaFactory: UE_PLUGIN_NAME="WebMMedia"
+Enabling plugin 'WindowsDeviceProfileSelector' (referenced via default plugins)
+Compile Env WindowsDeviceProfileSelector: UE_MODULE_NAME="WindowsDeviceProfileSelector"
+Compile Env WindowsDeviceProfileSelector: UE_PLUGIN_NAME="WindowsDeviceProfileSelector"
+Enabling plugin 'WindowsMoviePlayer' (referenced via default plugins)
+Compile Env WindowsMoviePlayer: UE_MODULE_NAME="WindowsMoviePlayer"
+Compile Env WindowsMoviePlayer: UE_PLUGIN_NAME="WindowsMoviePlayer"
+Enabling plugin 'InterchangeTests' (referenced via default plugins)
+Ignoring plugin 'Interchange' (referenced via default plugins -> InterchangeTests.uplugin), not enabled for target Game
+Enabling plugin 'TraceUtilities' (referenced via default plugins)
+Compile Env TraceUtilities: UE_MODULE_NAME="TraceUtilities"
+Compile Env TraceUtilities: UE_PLUGIN_NAME="TraceUtilities"
+Enabling plugin 'XGEController' (referenced via default plugins)
+Compile Env Proun_Pre_Alpha: UE_MODULE_NAME="Proun_Pre_Alpha"
+Compile Env Proun_Pre_Alpha: UE_PLUGIN_NAME=""
+Compile Env ProfilerService: UE_MODULE_NAME="ProfilerService"
+Compile Env ProfilerService: UE_PLUGIN_NAME=""
+Compile Env AutomationController: UE_MODULE_NAME="AutomationController"
+Compile Env AutomationController: UE_PLUGIN_NAME=""
+Compile Env AutomationTest: UE_MODULE_NAME="AutomationTest"
+Compile Env AutomationTest: UE_PLUGIN_NAME=""
+Compile Env TaskGraph: UE_MODULE_NAME="TaskGraph"
+Compile Env TaskGraph: UE_PLUGIN_NAME=""
+Compile Env Media: UE_MODULE_NAME="Media"
+Compile Env Media: UE_PLUGIN_NAME=""
+Compile Env SlateNullRenderer: UE_MODULE_NAME="SlateNullRenderer"
+Compile Env SlateNullRenderer: UE_PLUGIN_NAME=""
+Compile Env SlateRHIRenderer: UE_MODULE_NAME="SlateRHIRenderer"
+Compile Env SlateRHIRenderer: UE_PLUGIN_NAME=""
+Compile Env MessagingCommon: UE_MODULE_NAME="MessagingCommon"
+Compile Env MessagingCommon: UE_PLUGIN_NAME=""
+Compile Env Messaging: UE_MODULE_NAME="Messaging"
+Compile Env Messaging: UE_PLUGIN_NAME=""
+Compile Env DerivedDataCache: WITH_HTTP_DDC_BACKEND=1
+Compile Env DerivedDataCache: WITH_S3_DDC_BACKEND=1
+Compile Env DerivedDataCache: UE_MODULE_NAME="DerivedDataCache"
+Compile Env DerivedDataCache: UE_PLUGIN_NAME=""
+Compile Env SessionServices: UE_MODULE_NAME="SessionServices"
+Compile Env SessionServices: UE_PLUGIN_NAME=""
+Compile Env Core: UE_MEMORY_TAGS_TRACE_ENABLED=1
+Compile Env Core: UE_ENABLE_ICU=1
+Compile Env Core: WITH_ADDITIONAL_CRASH_CONTEXTS=1
+Compile Env Core: WITH_VS_PERF_PROFILER=0
+Compile Env Core: WITH_SUPERLUMINAL_PROFILER=0
+Compile Env Core: WITH_CONCURRENCYVIEWER_PROFILER=0
+Compile Env Core: WITH_DIRECTXMATH=0
+Compile Env Core: UE_WITH_IRIS=0
+Compile Env Core: PLATFORM_SUPPORTS_PLATFORM_EVENTS=1
+Compile Env Core: PLATFORM_SUPPORTS_TRACE_WIN32_VIRTUAL_MEMORY_HOOKS=1
+Compile Env Core: PLATFORM_SUPPORTS_TRACE_WIN32_MODULE_DIAGNOSTICS=1
+Compile Env Core: PLATFORM_SUPPORTS_TRACE_WIN32_CALLSTACK=1
+Compile Env Core: UE_MEMORY_TRACE_AVAILABLE=1
+Compile Env Core: WITH_MALLOC_STOMP=1
+Compile Env Core: PLATFORM_BUILDS_MIMALLOC=1
+Compile Env Core: USE_BUNDLED_DBGHELP=1
+Compile Env Core: YIELD_BETWEEN_TASKS=1
+Compile Env Core: IS_CLIENT_TARGET=0
+Compile Env Core: PLATFORM_SUPPORTS_BINARYCONFIG=1
+Compile Env Core: PLATFORM_COMPILER_OPTIMIZATION_LTCG=0
+Compile Env Core: PLATFORM_COMPILER_OPTIMIZATION_PG=0
+Compile Env Core: PLATFORM_COMPILER_OPTIMIZATION_PG_PROFILING=0
+Compile Env Core: UE_DEFINE_LEGACY_MATH_CONSTANT_MACRO_NAMES=0
+Compile Env Core: UE_MODULE_NAME="Core"
+Compile Env Core: UE_PLUGIN_NAME=""
+Compile Env TargetPlatform: UE_MODULE_NAME="TargetPlatform"
+Compile Env TargetPlatform: UE_PLUGIN_NAME=""
+Compile Env TextureFormat: UE_MODULE_NAME="TextureFormat"
+Compile Env TextureFormat: UE_PLUGIN_NAME=""
+Compile Env InputDevice: UE_MODULE_NAME="InputDevice"
+Compile Env InputDevice: UE_PLUGIN_NAME=""
+Compile Env Analytics: UE_MODULE_NAME="Analytics"
+Compile Env Analytics: UE_PLUGIN_NAME=""
+Compile Env RHI: RHI_WANT_BREADCRUMB_EVENTS=1
+Compile Env RHI: RHI_WANT_RESOURCE_INFO=1
+Compile Env RHI: UE_MODULE_NAME="RHI"
+Compile Env RHI: UE_PLUGIN_NAME=""
+Compile Env TraceLog: UE_MODULE_NAME="TraceLog"
+Compile Env TraceLog: UE_PLUGIN_NAME=""
+Compile Env BuildSettings: ENGINE_VERSION_MAJOR=5
+Compile Env BuildSettings: ENGINE_VERSION_MINOR=1
+Compile Env BuildSettings: ENGINE_VERSION_HOTFIX=1
+Compile Env BuildSettings: ENGINE_IS_LICENSEE_VERSION=false
+Compile Env BuildSettings: ENGINE_IS_PROMOTED_BUILD=true
+Compile Env BuildSettings: CURRENT_CHANGELIST=23901901
+Compile Env BuildSettings: COMPATIBLE_CHANGELIST=23058290
+Compile Env BuildSettings: BRANCH_NAME="++UE5+Release-5.1"
+Compile Env BuildSettings: BUILD_VERSION="++UE5+Release-5.1-CL-23901901"
+Compile Env BuildSettings: UE_MODULE_NAME="BuildSettings"
+Compile Env BuildSettings: UE_PLUGIN_NAME=""
+Compile Env CoreUObject: UE_DEFINE_LEGACY_MATH_CONSTANT_MACRO_NAMES=0
+Compile Env CoreUObject: UE_MODULE_NAME="CoreUObject"
+Compile Env CoreUObject: UE_PLUGIN_NAME=""
+Compile Env Projects: READ_TARGET_ENABLED_PLUGINS_FROM_RECEIPT=0
+Compile Env Projects: LOAD_PLUGINS_FOR_TARGET_PLATFORMS=0
+Compile Env Projects: UBT_TARGET_ENABLED_PLUGINS=
+Compile Env Projects: UBT_TARGET_DISABLED_PLUGINS=
+Compile Env Projects: UE_MODULE_NAME="Projects"
+Compile Env Projects: UE_PLUGIN_NAME=""
+Compile Env Json: UE_MODULE_NAME="Json"
+Compile Env Json: UE_PLUGIN_NAME=""
+Compile Env EngineMessages: UE_MODULE_NAME="EngineMessages"
+Compile Env EngineMessages: UE_PLUGIN_NAME=""
+Compile Env SessionMessages: UE_MODULE_NAME="SessionMessages"
+Compile Env SessionMessages: UE_PLUGIN_NAME=""
+Compile Env CookOnTheFly: UE_MODULE_NAME="CookOnTheFly"
+Compile Env CookOnTheFly: UE_PLUGIN_NAME=""
+Compile Env Sockets: SOCKETS_PACKAGE=1
+Compile Env Sockets: UE_MODULE_NAME="Sockets"
+Compile Env Sockets: UE_PLUGIN_NAME=""
+Compile Env NetCommon: UE_MODULE_NAME="NetCommon"
+Compile Env NetCommon: UE_PLUGIN_NAME=""
+Compile Env Networking: UE_MODULE_NAME="Networking"
+Compile Env Networking: UE_PLUGIN_NAME=""
+Compile Env Engine: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env Engine: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env Engine: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env Engine: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env Engine: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env Engine: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env Engine: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env Engine: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env Engine: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env Engine: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env Engine: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env Engine: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env Engine: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env Engine: GPUPARTICLE_LOCAL_VF_ONLY=0
+Compile Env Engine: WITH_ODSC=1
+Compile Env Engine: UE_WITH_IRIS=0
+Compile Env Engine: UE_DEPRECATE_LEGACY_MATH_CONSTANT_MACRO_NAMES=1
+Compile Env Engine: UE_MODULE_NAME="Engine"
+Compile Env Engine: UE_PLUGIN_NAME=""
+Compile Env AnimationCore: UE_MODULE_NAME="AnimationCore"
+Compile Env AnimationCore: UE_PLUGIN_NAME=""
+Compile Env AudioMixer: UE_MODULE_NAME="AudioMixer"
+Compile Env AudioMixer: UE_PLUGIN_NAME=""
+Compile Env AudioMixerCore: UE_MODULE_NAME="AudioMixerCore"
+Compile Env AudioMixerCore: UE_PLUGIN_NAME=""
+Compile Env SignalProcessing: UE_MODULE_NAME="SignalProcessing"
+Compile Env SignalProcessing: UE_PLUGIN_NAME=""
+Compile Env MovieSceneCapture: UE_MODULE_NAME="MovieSceneCapture"
+Compile Env MovieSceneCapture: UE_PLUGIN_NAME=""
+Compile Env PacketHandler: UE_MODULE_NAME="PacketHandler"
+Compile Env PacketHandler: UE_PLUGIN_NAME=""
+Compile Env Renderer: UE_MODULE_NAME="Renderer"
+Compile Env Renderer: UE_PLUGIN_NAME=""
+Compile Env TypedElementFramework: UE_MODULE_NAME="TypedElementFramework"
+Compile Env TypedElementFramework: UE_PLUGIN_NAME=""
+Compile Env TypedElementRuntime: UE_MODULE_NAME="TypedElementRuntime"
+Compile Env TypedElementRuntime: UE_PLUGIN_NAME=""
+Compile Env Chaos: COMPILE_WITHOUT_UNREAL_SUPPORT=0
+Compile Env Chaos: CHAOS_MEMORY_TRACKING=0
+Compile Env Chaos: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env Chaos: UE_MODULE_NAME="Chaos"
+Compile Env Chaos: UE_PLUGIN_NAME=""
+Compile Env ClothingSystemRuntimeInterface: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env ClothingSystemRuntimeInterface: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeInterface: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeInterface: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeInterface: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeInterface: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeInterface: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeInterface: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeInterface: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeInterface: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeInterface: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeInterface: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeInterface: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeInterface: UE_MODULE_NAME="ClothingSystemRuntimeInterface"
+Compile Env ClothingSystemRuntimeInterface: UE_PLUGIN_NAME=""
+Compile Env ImageWrapper: WITH_UNREALPNG=1
+Compile Env ImageWrapper: WITH_UNREALJPEG=1
+Compile Env ImageWrapper: WITH_LIBJPEGTURBO=1
+Compile Env ImageWrapper: WITH_UNREALEXR=1
+Compile Env ImageWrapper: UE_MODULE_NAME="ImageWrapper"
+Compile Env ImageWrapper: UE_PLUGIN_NAME=""
+Compile Env ImageCore: UE_MODULE_NAME="ImageCore"
+Compile Env ImageCore: UE_PLUGIN_NAME=""
+Compile Env ImageWriteQueue: UE_MODULE_NAME="ImageWriteQueue"
+Compile Env ImageWriteQueue: UE_PLUGIN_NAME=""
+Compile Env HeadMountedDisplay: UE_MODULE_NAME="HeadMountedDisplay"
+Compile Env HeadMountedDisplay: UE_PLUGIN_NAME=""
+Compile Env EyeTracker: UE_MODULE_NAME="EyeTracker"
+Compile Env EyeTracker: UE_PLUGIN_NAME=""
+Compile Env MRMesh: UE_MODULE_NAME="MRMesh"
+Compile Env MRMesh: UE_PLUGIN_NAME=""
+Compile Env Advertising: UE_MODULE_NAME="Advertising"
+Compile Env Advertising: UE_PLUGIN_NAME=""
+Compile Env AutomationWorker: UE_MODULE_NAME="AutomationWorker"
+Compile Env AutomationWorker: UE_PLUGIN_NAME=""
+Compile Env DesktopPlatform: UE_MODULE_NAME="DesktopPlatform"
+Compile Env DesktopPlatform: UE_PLUGIN_NAME=""
+Compile Env SlateReflector: SLATE_REFLECTOR_HAS_SESSION_SERVICES=0
+Compile Env SlateReflector: SLATE_REFLECTOR_HAS_DESKTOP_PLATFORM=0
+Compile Env SlateReflector: UE_MODULE_NAME="SlateReflector"
+Compile Env SlateReflector: UE_PLUGIN_NAME=""
+Compile Env Localization: UE_MODULE_NAME="Localization"
+Compile Env Localization: UE_PLUGIN_NAME=""
+Compile Env MessagingRpc: UE_MODULE_NAME="MessagingRpc"
+Compile Env MessagingRpc: UE_PLUGIN_NAME=""
+Compile Env PortalRpc: UE_MODULE_NAME="PortalRpc"
+Compile Env PortalRpc: UE_PLUGIN_NAME=""
+Compile Env PortalServices: WITH_PORTAL_SERVICES=1
+Compile Env PortalServices: UE_MODULE_NAME="PortalServices"
+Compile Env PortalServices: UE_PLUGIN_NAME=""
+Compile Env CoreOnline: PLATFORM_MAX_LOCAL_PLAYERS=0
+Compile Env CoreOnline: COREONLINE_PACKAGE=1
+Compile Env CoreOnline: UE_MODULE_NAME="CoreOnline"
+Compile Env CoreOnline: UE_PLUGIN_NAME=""
+Compile Env NetCore: UE_MODULE_NAME="NetCore"
+Compile Env NetCore: UE_PLUGIN_NAME=""
+Compile Env ApplicationCore: UE_WINDOWS_USING_UIA=1
+Compile Env ApplicationCore: UE_MODULE_NAME="ApplicationCore"
+Compile Env ApplicationCore: UE_PLUGIN_NAME=""
+Compile Env SynthBenchmark: UE_MODULE_NAME="SynthBenchmark"
+Compile Env SynthBenchmark: UE_PLUGIN_NAME=""
+Compile Env ColorManagement: UE_MODULE_NAME="ColorManagement"
+Compile Env ColorManagement: UE_PLUGIN_NAME=""
+Compile Env JsonUtilities: UE_MODULE_NAME="JsonUtilities"
+Compile Env JsonUtilities: UE_PLUGIN_NAME=""
+Compile Env SlateCore: WITH_FREETYPE=1
+Compile Env SlateCore: UE_MODULE_NAME="SlateCore"
+Compile Env SlateCore: UE_PLUGIN_NAME=""
+Compile Env InputCore: UE_MODULE_NAME="InputCore"
+Compile Env InputCore: UE_PLUGIN_NAME=""
+Compile Env Slate: SLATE_MODULE=1
+Compile Env Slate: UE_MODULE_NAME="Slate"
+Compile Env Slate: UE_PLUGIN_NAME=""
+Compile Env Settings: UE_MODULE_NAME="Settings"
+Compile Env Settings: UE_PLUGIN_NAME=""
+Compile Env RenderCore: UE_MODULE_NAME="RenderCore"
+Compile Env RenderCore: UE_PLUGIN_NAME=""
+Compile Env NullDrv: UE_MODULE_NAME="NullDrv"
+Compile Env NullDrv: UE_PLUGIN_NAME=""
+Compile Env D3D11RHI: UE_MODULE_NAME="D3D11RHI"
+Compile Env D3D11RHI: UE_PLUGIN_NAME=""
+Compile Env RHICore: UE_MODULE_NAME="RHICore"
+Compile Env RHICore: UE_PLUGIN_NAME=""
+Compile Env D3D12RHI: D3D12RHI_PLATFORM_HAS_CUSTOM_INTERFACE=0
+Compile Env D3D12RHI: PROFILE
+Compile Env D3D12RHI: UE_MODULE_NAME="D3D12RHI"
+Compile Env D3D12RHI: UE_PLUGIN_NAME=""
+Compile Env VulkanRHI: VK_USE_PLATFORM_WIN32_KHR=1
+Compile Env VulkanRHI: VK_USE_PLATFORM_WIN32_KHX=1
+Compile Env VulkanRHI: UE_MODULE_NAME="VulkanRHI"
+Compile Env VulkanRHI: UE_PLUGIN_NAME=""
+Compile Env AugmentedReality: UE_MODULE_NAME="AugmentedReality"
+Compile Env AugmentedReality: UE_PLUGIN_NAME=""
+Compile Env PhysicsCore: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env PhysicsCore: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env PhysicsCore: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env PhysicsCore: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env PhysicsCore: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env PhysicsCore: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env PhysicsCore: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env PhysicsCore: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env PhysicsCore: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env PhysicsCore: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env PhysicsCore: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env PhysicsCore: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env PhysicsCore: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env PhysicsCore: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env PhysicsCore: UE_MODULE_NAME="PhysicsCore"
+Compile Env PhysicsCore: UE_PLUGIN_NAME=""
+Compile Env DeveloperSettings: UE_MODULE_NAME="DeveloperSettings"
+Compile Env DeveloperSettings: UE_PLUGIN_NAME=""
+Compile Env ChaosCore: COMPILE_WITHOUT_UNREAL_SUPPORT=0
+Compile Env ChaosCore: CHAOS_CHECKED=0
+Compile Env ChaosCore: CHAOS_DEBUG_NAME=1
+Compile Env ChaosCore: UE_MODULE_NAME="ChaosCore"
+Compile Env ChaosCore: UE_PLUGIN_NAME=""
+Compile Env Voronoi: UE_MODULE_NAME="Voronoi"
+Compile Env Voronoi: UE_PLUGIN_NAME=""
+Compile Env GeometryCore: UE_MODULE_NAME="GeometryCore"
+Compile Env GeometryCore: UE_PLUGIN_NAME=""
+Compile Env EngineSettings: UE_MODULE_NAME="EngineSettings"
+Compile Env EngineSettings: UE_PLUGIN_NAME=""
+Compile Env MaterialShaderQualitySettings: UE_MODULE_NAME="MaterialShaderQualitySettings"
+Compile Env MaterialShaderQualitySettings: UE_PLUGIN_NAME=""
+Compile Env PreLoadScreen: UE_MODULE_NAME="PreLoadScreen"
+Compile Env PreLoadScreen: UE_PLUGIN_NAME=""
+Compile Env AnalyticsET: UE_MODULE_NAME="AnalyticsET"
+Compile Env AnalyticsET: UE_PLUGIN_NAME=""
+Compile Env HTTP: HTTP_PACKAGE=1
+Compile Env HTTP: CURL_ENABLE_DEBUG_CALLBACK=1
+Compile Env HTTP: CURL_ENABLE_NO_TIMEOUTS_OPTION=1
+Compile Env HTTP: WITH_WINHTTP=1
+Compile Env HTTP: WITH_CURL_LIBCURL =1
+Compile Env HTTP: WITH_CURL_XCURL=0
+Compile Env HTTP: WITH_CURL= 1
+Compile Env HTTP: UE_MODULE_NAME="HTTP"
+Compile Env HTTP: UE_PLUGIN_NAME=""
+Compile Env SSL: SSL_PACKAGE=1
+Compile Env SSL: WITH_SSL=1
+Compile Env SSL: USE_DEFAULT_SSLCERT=0
+Compile Env SSL: UE_MODULE_NAME="SSL"
+Compile Env SSL: UE_PLUGIN_NAME=""
+Compile Env BuildPatchServices: UE_MODULE_NAME="BuildPatchServices"
+Compile Env BuildPatchServices: UE_PLUGIN_NAME=""
+Compile Env OpenGLDrv: USE_ANDROID_OPENGL=0
+Compile Env OpenGLDrv: UE_MODULE_NAME="OpenGLDrv"
+Compile Env OpenGLDrv: UE_PLUGIN_NAME=""
+Compile Env AssetRegistry: UE_MODULE_NAME="AssetRegistry"
+Compile Env AssetRegistry: UE_PLUGIN_NAME=""
+Compile Env GameplayTags: UE_WITH_IRIS=0
+Compile Env GameplayTags: UE_MODULE_NAME="GameplayTags"
+Compile Env GameplayTags: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on GameplayTags which breaks the chain
+Compile Env IrisStub: UE_WITH_IRIS=0
+Compile Env IrisStub: UE_MODULE_NAME="IrisStub"
+Compile Env IrisStub: UE_PLUGIN_NAME=""
+Compile Env ReliabilityHandlerComponent: UE_MODULE_NAME="ReliabilityHandlerComponent"
+Compile Env ReliabilityHandlerComponent: UE_PLUGIN_NAME=""
+Found circular reference to PacketHandler.Build.cs, but PacketHandler declares a cycle on ReliabilityHandlerComponent which breaks the chain
+Compile Env AudioPlatformConfiguration: WITH_LIBSAMPLERATE=1
+Compile Env AudioPlatformConfiguration: UE_MODULE_NAME="AudioPlatformConfiguration"
+Compile Env AudioPlatformConfiguration: UE_PLUGIN_NAME=""
+Compile Env UELibSampleRate: UE_MODULE_NAME="UELibSampleRate"
+Compile Env UELibSampleRate: UE_PLUGIN_NAME=""
+Compile Env MeshDescription: UE_MODULE_NAME="MeshDescription"
+Compile Env MeshDescription: UE_PLUGIN_NAME=""
+Compile Env StaticMeshDescription: UE_MODULE_NAME="StaticMeshDescription"
+Compile Env StaticMeshDescription: UE_PLUGIN_NAME=""
+Compile Env MeshUtilitiesCommon: UE_MODULE_NAME="MeshUtilitiesCommon"
+Compile Env MeshUtilitiesCommon: UE_PLUGIN_NAME=""
+Compile Env RawMesh: UE_MODULE_NAME="RawMesh"
+Compile Env RawMesh: UE_PLUGIN_NAME=""
+Compile Env SkeletalMeshDescription: UE_MODULE_NAME="SkeletalMeshDescription"
+Compile Env SkeletalMeshDescription: UE_PLUGIN_NAME=""
+Compile Env PakFile: UE_MODULE_NAME="PakFile"
+Compile Env PakFile: UE_PLUGIN_NAME=""
+Compile Env RSA: RSA_USE_OPENSSL=1
+Compile Env RSA: UE_MODULE_NAME="RSA"
+Compile Env RSA: UE_PLUGIN_NAME=""
+Compile Env NetworkReplayStreaming: UE_MODULE_NAME="NetworkReplayStreaming"
+Compile Env NetworkReplayStreaming: UE_PLUGIN_NAME=""
+Compile Env AudioExtensions: UE_MODULE_NAME="AudioExtensions"
+Compile Env AudioExtensions: UE_PLUGIN_NAME=""
+Compile Env AudioLinkCore: UE_MODULE_NAME="AudioLinkCore"
+Compile Env AudioLinkCore: UE_PLUGIN_NAME=""
+Compile Env EditorAnalyticsSession: UE_MODULE_NAME="EditorAnalyticsSession"
+Compile Env EditorAnalyticsSession: UE_PLUGIN_NAME=""
+Compile Env AppFramework: UE_MODULE_NAME="AppFramework"
+Compile Env AppFramework: UE_PLUGIN_NAME=""
+Compile Env MessageLog: UE_MODULE_NAME="MessageLog"
+Compile Env MessageLog: UE_PLUGIN_NAME=""
+Compile Env ToolWidgets: UE_MODULE_NAME="ToolWidgets"
+Compile Env ToolWidgets: UE_PLUGIN_NAME=""
+Compile Env ToolMenus: UE_MODULE_NAME="ToolMenus"
+Compile Env ToolMenus: UE_PLUGIN_NAME=""
+Compile Env SlateFontDialog: UE_MODULE_NAME="SlateFontDialog"
+Compile Env SlateFontDialog: UE_PLUGIN_NAME=""
+Compile Env LauncherPlatform: UE_MODULE_NAME="LauncherPlatform"
+Compile Env LauncherPlatform: UE_PLUGIN_NAME=""
+Compile Env Landscape: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env Landscape: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env Landscape: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env Landscape: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env Landscape: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env Landscape: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env Landscape: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env Landscape: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env Landscape: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env Landscape: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env Landscape: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env Landscape: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env Landscape: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env Landscape: UE_MODULE_NAME="Landscape"
+Compile Env Landscape: UE_PLUGIN_NAME=""
+Compile Env Foliage: UE_MODULE_NAME="Foliage"
+Compile Env Foliage: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on Landscape which breaks the chain
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on Landscape which breaks the chain
+Compile Env UMG: UE_MODULE_NAME="UMG"
+Compile Env UMG: UE_PLUGIN_NAME=""
+Compile Env MovieScene: UE_MODULE_NAME="MovieScene"
+Compile Env MovieScene: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env TimeManagement: UE_MODULE_NAME="TimeManagement"
+Compile Env TimeManagement: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env MovieSceneTracks: UE_MODULE_NAME="MovieSceneTracks"
+Compile Env MovieSceneTracks: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env Constraints: UE_MODULE_NAME="Constraints"
+Compile Env Constraints: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env AnimGraphRuntime: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env AnimGraphRuntime: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env AnimGraphRuntime: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env AnimGraphRuntime: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env AnimGraphRuntime: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env AnimGraphRuntime: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env AnimGraphRuntime: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env AnimGraphRuntime: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env AnimGraphRuntime: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env AnimGraphRuntime: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env AnimGraphRuntime: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env AnimGraphRuntime: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env AnimGraphRuntime: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env AnimGraphRuntime: UE_MODULE_NAME="AnimGraphRuntime"
+Compile Env AnimGraphRuntime: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env GeometryCollectionEngine: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env GeometryCollectionEngine: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env GeometryCollectionEngine: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env GeometryCollectionEngine: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env GeometryCollectionEngine: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env GeometryCollectionEngine: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env GeometryCollectionEngine: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env GeometryCollectionEngine: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env GeometryCollectionEngine: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env GeometryCollectionEngine: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env GeometryCollectionEngine: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env GeometryCollectionEngine: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env GeometryCollectionEngine: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env GeometryCollectionEngine: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env GeometryCollectionEngine: UE_MODULE_NAME="GeometryCollectionEngine"
+Compile Env GeometryCollectionEngine: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env FieldSystemEngine: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env FieldSystemEngine: UE_MODULE_NAME="FieldSystemEngine"
+Compile Env FieldSystemEngine: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env ChaosSolverEngine: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env ChaosSolverEngine: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ChaosSolverEngine: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ChaosSolverEngine: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env ChaosSolverEngine: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env ChaosSolverEngine: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env ChaosSolverEngine: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env ChaosSolverEngine: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ChaosSolverEngine: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env ChaosSolverEngine: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env ChaosSolverEngine: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env ChaosSolverEngine: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ChaosSolverEngine: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env ChaosSolverEngine: CHAOS_INCLUDE_LEVEL_1=1
+Compile Env ChaosSolverEngine: UE_MODULE_NAME="ChaosSolverEngine"
+Compile Env ChaosSolverEngine: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env DataflowCore: UE_MODULE_NAME="DataflowCore"
+Compile Env DataflowCore: UE_PLUGIN_NAME=""
+Compile Env DataflowEngine: UE_MODULE_NAME="DataflowEngine"
+Compile Env DataflowEngine: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env MeshConversion: UE_MODULE_NAME="MeshConversion"
+Compile Env MeshConversion: UE_PLUGIN_NAME=""
+Compile Env PropertyPath: UE_MODULE_NAME="PropertyPath"
+Compile Env PropertyPath: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on UMG which breaks the chain
+Compile Env MoviePlayerProxy: UE_MODULE_NAME="MoviePlayerProxy"
+Compile Env MoviePlayerProxy: UE_PLUGIN_NAME=""
+Compile Env CinematicCamera: UE_MODULE_NAME="CinematicCamera"
+Compile Env CinematicCamera: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on CinematicCamera which breaks the chain
+Compile Env AudioLinkEngine: UE_MODULE_NAME="AudioLinkEngine"
+Compile Env AudioLinkEngine: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on AudioMixer which breaks the chain
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on AudioMixer which breaks the chain
+Compile Env NonRealtimeAudioRenderer: UE_MODULE_NAME="NonRealtimeAudioRenderer"
+Compile Env NonRealtimeAudioRenderer: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on AudioMixer which breaks the chain
+Compile Env BinkAudioDecoder: WITH_BINK_AUDIO=1
+Compile Env BinkAudioDecoder: UE_MODULE_NAME="BinkAudioDecoder"
+Compile Env BinkAudioDecoder: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on AudioMixer which breaks the chain
+Found circular reference to AudioMixer.Build.cs, but Engine declares a cycle on AudioMixer which breaks the chain
+Compile Env SoundFieldRendering: UE_MODULE_NAME="SoundFieldRendering"
+Compile Env SoundFieldRendering: UE_PLUGIN_NAME=""
+Found circular reference to Engine.Build.cs, but Engine declares a cycle on AudioMixer which breaks the chain
+Found circular reference to AudioMixer.Build.cs, but Engine declares a cycle on AudioMixer which breaks the chain
+Compile Env Icmp: ICMP_PACKAGE=1
+Compile Env Icmp: UE_MODULE_NAME="Icmp"
+Compile Env Icmp: UE_PLUGIN_NAME=""
+Compile Env XmlParser: UE_MODULE_NAME="XmlParser"
+Compile Env XmlParser: UE_PLUGIN_NAME=""
+Compile Env SourceControl: SOURCE_CONTROL_WITH_SLATE=1
+Compile Env SourceControl: UE_MODULE_NAME="SourceControl"
+Compile Env SourceControl: UE_PLUGIN_NAME=""
+Compile Env LevelSequence: UE_MODULE_NAME="LevelSequence"
+Compile Env LevelSequence: UE_PLUGIN_NAME=""
+Compile Env MediaAssets: UE_MODULE_NAME="MediaAssets"
+Compile Env MediaAssets: UE_PLUGIN_NAME=""
+Compile Env MediaUtils: UE_MODULE_NAME="MediaUtils"
+Compile Env MediaUtils: UE_PLUGIN_NAME=""
+Compile Env AVIWriter: UE_MODULE_NAME="AVIWriter"
+Compile Env AVIWriter: UE_PLUGIN_NAME=""
+Compile Env StreamingPauseRendering: UE_MODULE_NAME="StreamingPauseRendering"
+Compile Env StreamingPauseRendering: UE_PLUGIN_NAME=""
+Compile Env MoviePlayer: UE_MODULE_NAME="MoviePlayer"
+Compile Env MoviePlayer: UE_PLUGIN_NAME=""
+Compile Env NullNetworkReplayStreaming: UE_MODULE_NAME="NullNetworkReplayStreaming"
+Compile Env NullNetworkReplayStreaming: UE_PLUGIN_NAME=""
+Compile Env LocalFileNetworkReplayStreaming: UE_MODULE_NAME="LocalFileNetworkReplayStreaming"
+Compile Env LocalFileNetworkReplayStreaming: UE_PLUGIN_NAME=""
+Compile Env HttpNetworkReplayStreaming: UE_MODULE_NAME="HttpNetworkReplayStreaming"
+Compile Env HttpNetworkReplayStreaming: UE_PLUGIN_NAME=""
+Compile Env LiveCoding: USE_DEBUG_LIVE_CODING_CONSOLE=0
+Compile Env LiveCoding: LC_DEBUG=0
+Compile Env LiveCoding: UE_MODULE_NAME="LiveCoding"
+Compile Env LiveCoding: UE_PLUGIN_NAME=""
+Compile Env SandboxFile: UE_MODULE_NAME="SandboxFile"
+Compile Env SandboxFile: UE_PLUGIN_NAME=""
+Compile Env Serialization: UE_MODULE_NAME="Serialization"
+Compile Env Serialization: UE_PLUGIN_NAME=""
+Compile Env Cbor: UE_MODULE_NAME="Cbor"
+Compile Env Cbor: UE_PLUGIN_NAME=""
+Compile Env Overlay: UE_MODULE_NAME="Overlay"
+Compile Env Overlay: UE_PLUGIN_NAME=""
+Compile Env InstallBundleManager: UE_MODULE_NAME="InstallBundleManager"
+Compile Env InstallBundleManager: UE_PLUGIN_NAME=""
+Compile Env NetworkFile: ENABLE_HTTP_FOR_NETWORK_FILE=0
+Compile Env NetworkFile: UE_MODULE_NAME="NetworkFile"
+Compile Env NetworkFile: UE_PLUGIN_NAME=""
+Compile Env StreamingFile: UE_MODULE_NAME="StreamingFile"
+Compile Env StreamingFile: UE_PLUGIN_NAME=""
+Compile Env AutomationMessages: UE_MODULE_NAME="AutomationMessages"
+Compile Env AutomationMessages: UE_PLUGIN_NAME=""
+Compile Env ClothingSystemRuntimeNv: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env ClothingSystemRuntimeNv: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeNv: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeNv: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeNv: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeNv: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeNv: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeNv: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeNv: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeNv: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeNv: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeNv: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeNv: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeNv: UE_MODULE_NAME="ClothingSystemRuntimeNv"
+Compile Env ClothingSystemRuntimeNv: UE_PLUGIN_NAME=""
+Compile Env ClothingSystemRuntimeCommon: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env ClothingSystemRuntimeCommon: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeCommon: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeCommon: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeCommon: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeCommon: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env ClothingSystemRuntimeCommon: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeCommon: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeCommon: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeCommon: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeCommon: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeCommon: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeCommon: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env ClothingSystemRuntimeCommon: UE_MODULE_NAME="ClothingSystemRuntimeCommon"
+Compile Env ClothingSystemRuntimeCommon: UE_PLUGIN_NAME=""
+Compile Env FunctionalTesting: UE_MODULE_NAME="FunctionalTesting"
+Compile Env FunctionalTesting: UE_PLUGIN_NAME=""
+Compile Env NavigationSystem: WITH_CLOTH_COLLISION_DETECTION=1
+Compile Env NavigationSystem: INCLUDE_CHAOS=UE_DEPRECATED_MACRO(5.1, "INCLUDE_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env NavigationSystem: WITH_CHAOS=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS is deprecated and should always be considered 1.") 1
+Compile Env NavigationSystem: WITH_CHAOS_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_CLOTHING is deprecated and should always be considered 1.") 1
+Compile Env NavigationSystem: WITH_CHAOS_NEEDS_TO_BE_FIXED=UE_DEPRECATED_MACRO(5.1, "WITH_CHAOS_NEEDS_TO_BE_FIXED is deprecated and should always be considered 1.") 1
+Compile Env NavigationSystem: WITH_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX is deprecated and should always be considered 1.") 1
+Compile Env NavigationSystem: WITH_PHYSX_COOKING=UE_DEPRECATED_MACRO(5.1, "WITH_PHYSX_COOKING is deprecated and should always be considered 0.") 0
+Compile Env NavigationSystem: PHYSICS_INTERFACE_PHYSX=UE_DEPRECATED_MACRO(5.1, "PHYSICS_INTERFACE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env NavigationSystem: WITH_APEX=UE_DEPRECATED_MACRO(5.1, "WITH_APEX is deprecated and should always be considered 0.") 0
+Compile Env NavigationSystem: WITH_APEX_CLOTHING=UE_DEPRECATED_MACRO(5.1, "WITH_APEX_CLOTHING is deprecated and should always be considered 0.") 0
+Compile Env NavigationSystem: WITH_NVCLOTH=UE_DEPRECATED_MACRO(5.1, "WITH_NVCLOTH is deprecated and should always be considered 0.") 0
+Compile Env NavigationSystem: WITH_IMMEDIATE_PHYSX=UE_DEPRECATED_MACRO(5.1, "WITH_IMMEDIATE_PHYSX is deprecated and should always be considered 0.") 0
+Compile Env NavigationSystem: WITH_CUSTOM_SQ_STRUCTURE=UE_DEPRECATED_MACRO(5.1, "WITH_CUSTOM_SQ_STRUCTURE is deprecated and should always be considered 0.") 0
+Compile Env NavigationSystem: WITH_RECAST=1
+Compile Env NavigationSystem: WITH_NAVMESH_SEGMENT_LINKS=1
+Compile Env NavigationSystem: WITH_NAVMESH_CLUSTER_LINKS=1
+Compile Env NavigationSystem: UE_MODULE_NAME="NavigationSystem"
+Compile Env NavigationSystem: UE_PLUGIN_NAME=""
+Compile Env Navmesh: WITH_NAVMESH_SEGMENT_LINKS=1
+Compile Env Navmesh: WITH_NAVMESH_CLUSTER_LINKS=1
+Compile Env Navmesh: UE_MODULE_NAME="Navmesh"
+Compile Env Navmesh: UE_PLUGIN_NAME=""
+Compile Env AIModule: WITH_RECAST=1
+Compile Env AIModule: WITH_GAMEPLAY_DEBUGGER=1
+Compile Env AIModule: UE_MODULE_NAME="AIModule"
+Compile Env AIModule: UE_PLUGIN_NAME=""
+Compile Env GameplayTasks: UE_MODULE_NAME="GameplayTasks"
+Compile Env GameplayTasks: UE_PLUGIN_NAME=""
+Compile Env GameplayDebugger: UE_WITH_IRIS=0
+Compile Env GameplayDebugger: UE_MODULE_NAME="GameplayDebugger"
+Compile Env GameplayDebugger: UE_PLUGIN_NAME=""
+Compile Env DrawPrimitiveDebugger: UE_MODULE_NAME="DrawPrimitiveDebugger"
+Compile Env DrawPrimitiveDebugger: UE_PLUGIN_NAME=""
+Compile Env UnrealEdMessages: UE_MODULE_NAME="UnrealEdMessages"
+Compile Env UnrealEdMessages: UE_PLUGIN_NAME=""
+Compile Env ScreenShotComparisonTools: UE_MODULE_NAME="ScreenShotComparisonTools"
+Compile Env ScreenShotComparisonTools: UE_PLUGIN_NAME=""
+Compile Env StorageServerClient: UE_MODULE_NAME="StorageServerClient"
+Compile Env StorageServerClient: UE_PLUGIN_NAME=""
+Compile Env WindowsPlatformFeatures: UE_MODULE_NAME="WindowsPlatformFeatures"
+Compile Env WindowsPlatformFeatures: UE_PLUGIN_NAME=""
+Compile Env AVEncoder: UE_MODULE_NAME="AVEncoder"
+Compile Env AVEncoder: UE_PLUGIN_NAME=""
+Compile Env CUDA: PLATFORM_SUPPORTS_CUDA=1
+Compile Env CUDA: UE_MODULE_NAME="CUDA"
+Compile Env CUDA: UE_PLUGIN_NAME=""
+Compile Env GameplayMediaEncoder: UE_MODULE_NAME="GameplayMediaEncoder"
+Compile Env GameplayMediaEncoder: UE_PLUGIN_NAME=""
+Compile Env AudioMixerPlatformAudioLink: UE_MODULE_NAME="AudioMixerPlatformAudioLink"
+Compile Env AudioMixerPlatformAudioLink: UE_PLUGIN_NAME=""
+Compile Env AudioMixerXAudio2: UE_MODULE_NAME="AudioMixerXAudio2"
+Compile Env AudioMixerXAudio2: UE_PLUGIN_NAME=""
+Compile Env RealtimeProfiler: UE_MODULE_NAME="RealtimeProfiler"
+Compile Env RealtimeProfiler: UE_PLUGIN_NAME=""
+Compile Env ProfilerMessages: UE_MODULE_NAME="ProfilerMessages"
+Compile Env ProfilerMessages: UE_PLUGIN_NAME=""
+Compile Env WebSockets: WEBSOCKETS_PACKAGE=1
+Compile Env WebSockets: WITH_WEBSOCKETS=1
+Compile Env WebSockets: WITH_LIBWEBSOCKETS=1
+Compile Env WebSockets: WITH_WINHTTPWEBSOCKETS=0
+Compile Env WebSockets: WEBSOCKETS_MANAGER_PLATFORM_INCLUDE="Lws/LwsWebSocketsManager.h"
+Compile Env WebSockets: WEBSOCKETS_MANAGER_PLATFORM_CLASS=FLwsWebSocketsManager
+Compile Env WebSockets: UE_MODULE_NAME="WebSockets"
+Compile Env WebSockets: UE_PLUGIN_NAME=""
+Compile Env DatasmithCore: UE_MODULE_NAME="DatasmithCore"
+Compile Env DatasmithCore: UE_PLUGIN_NAME=""
+Compile Env DirectLink: UE_MODULE_NAME="DirectLink"
+Compile Env DirectLink: UE_PLUGIN_NAME=""
+Compile Env VectorVM: VECTORVM_SUPPORTS_EXPERIMENTAL=1
+Compile Env VectorVM: VECTORVM_SUPPORTS_LEGACY=1
+Compile Env VectorVM: UE_MODULE_NAME="VectorVM"
+Compile Env VectorVM: UE_PLUGIN_NAME=""
+Compile Env RigVM: UE_MODULE_NAME="RigVM"
+Compile Env RigVM: UE_PLUGIN_NAME=""
+Compile Env AvfMedia: UE_MODULE_NAME="AvfMedia"
+Compile Env AvfMedia: UE_PLUGIN_NAME="AvfMedia"
+Compile Env Voice: VOICE_PACKAGE=1
+Compile Env Voice: VOICE_MODULE_WITH_CAPTURE=1
+Compile Env Voice: UE_MODULE_NAME="Voice"
+Compile Env Voice: UE_PLUGIN_NAME=""
+Compile Env AudioCaptureCore: UE_MODULE_NAME="AudioCaptureCore"
+Compile Env AudioCaptureCore: UE_PLUGIN_NAME=""
+Compile Env AudioCaptureRtAudio: WITH_RTAUDIO=1
+Compile Env AudioCaptureRtAudio: WITH_AUDIOCAPTURE=1
+Compile Env AudioCaptureRtAudio: UE_MODULE_NAME="AudioCaptureRtAudio"
+Compile Env AudioCaptureRtAudio: UE_PLUGIN_NAME=""
+Compile Env AudioCodecEngine: UE_MODULE_NAME="AudioCodecEngine"
+Compile Env AudioCodecEngine: UE_PLUGIN_NAME=""
+Compile Env AdvancedWidgets: UE_MODULE_NAME="AdvancedWidgets"
+Compile Env AdvancedWidgets: UE_PLUGIN_NAME=""
+Compile Env AudioAnalyzer: UE_MODULE_NAME="AudioAnalyzer"
+Compile Env AudioAnalyzer: UE_PLUGIN_NAME=""
+Compiler: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\cl.exe
+Linker: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe
+Library Manager: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\lib.exe
+Resource Compiler: C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64\rc.exe
+Using EngineIncludeOrderVersion.Unreal5_0 for target Proun_Pre_Alpha.Target.cs
+Generated code is up to date.
+Found 4 shared PCH headers (listed in order of preference):
+	Engine
+	Slate
+	CoreUObject
+	Core
+Compile module: Launch
+Compile module: PixelStreaming
+Compile module: PixelStreamingServers
+Compile module: PixelStreamingBlueprint
+Compile module: PixelCapture
+Compile module: PixelCaptureShaders
+Compile module: WmfMedia
+Compile module: WmfMediaFactory
+Compile module: EncoderAMF
+Compile module: EncoderNVENC
+Compile module: WebSocketNetworking
+Compile module: DatasmithC4DTranslator
+Compile module: DatasmithExternalSource
+Compile module: DatasmithTranslator
+Compile module: DatasmithNativeTranslator
+Compile module: DirectLinkExtension
+Compile module: ExternalSource
+Compile module: DirectLinkTest
+Compile module: DatasmithContent
+Compile module: VariantManagerContent
+Compile module: UdpMessaging
+Compile module: ModularGameplay
+Compile module: GameFeatures
+Compile module: DataRegistry
+Compile module: GameplayAbilities
+Compile module: NiagaraCore
+Compile module: Niagara
+Compile module: NiagaraAnimNotifies
+Compile module: NiagaraShader
+Compile module: NiagaraVertexFactories
+Compile module: PythonScriptPluginPreload
+Compile module: AbilitySystemGameFeatureActions
+Compile module: GeometryAlgorithms
+Compile module: DynamicMesh
+Compile module: HairStrandsCore
+Compile module: HairStrandsRuntime
+Compile module: GeometryCache
+Compile module: GeometryCacheTracks
+Compile module: AppleProResMedia
+Compile module: MovieRenderPipelineCore
+Compile module: MovieRenderPipelineSettings
+Compile module: MovieRenderPipelineRenderPasses
+Compile module: UEOpenExrRTTI
+Compile module: ActorLayerUtilities
+Compile module: SequencerScripting
+Compile module: OpenColorIO
+Compile module: PlayFabCpp
+Compile module: PlayFab
+Compile module: PlayFabCommon
+Compile module: BinkMediaPlayer
+Compile module: Paper2D
+Compile module: AISupportModule
+Compile module: ControlRigSpline
+Compile module: ControlRig
+Compile module: IKRig
+Compile module: FullBodyIK
+Compile module: PBIK
+Compile module: GameplayCameras
+Compile module: TemplateSequence
+Compile module: OodleNetworkHandlerComponent
+Compile module: AnimationSharing
+Compile module: SignificanceManager
+Compile module: DumpGPUServices
+Compile module: PixWinPlugin
+Compile module: UObjectPlugin
+Compile module: FacialAnimation
+Compile module: EnhancedInput
+Compile module: GLTFExporter
+Compile module: AutomationUtils
+Compile module: BackChannel
+Compile module: ChaosCloth
+Compile module: ChaosCaching
+Compile module: TakeMovieScene
+Compile module: GeometryCollectionTracks
+Compile module: GeometryCollectionNodes
+Compile module: ProceduralMeshComponent
+Compile module: DataflowNodes
+Compile module: PlanarCut
+Compile module: ChaosNiagara
+Compile module: ChaosUserDataPT
+Compile module: CharacterAI
+Compile module: Iris
+Compile module: OpenImageDenoise
+Compile module: PlatformCrypto
+Compile module: PlatformCryptoTypes
+Compile module: PlatformCryptoOpenSSL
+Compile module: AvfMediaFactory
+Compile module: ImgMedia
+Compile module: ImgMediaEngine
+Compile module: ImgMediaFactory
+Compile module: OpenExrWrapper
+Compile module: ExrReaderGpu
+Compile module: MediaCompositing
+Compile module: MediaPlate
+Compile module: TcpMessaging
+Compile module: ActorSequence
+Compile module: OnlineBase
+Compile module: OnlineSubsystemNull
+Compile module: OnlineSubsystem
+Compile module: OnlineSubsystemUtils
+Compile module: OnlineServicesInterface
+Compile module: OnlineServicesCommon
+Compile module: OnlineServicesCommonEngineUtils
+Compile module: LauncherChunkInstaller
+Compile module: AndroidFileServer
+Compile module: AndroidPermission
+Compile module: AppleImageUtils
+Compile module: ArchVisCharacter
+Compile module: AssetTags
+Compile module: AudioCapture
+Compile module: CableComponent
+Compile module: ChunkDownloader
+Compile module: CustomMeshComponent
+Compile module: ExampleDeviceProfileSelector
+Compile module: GooglePAD
+Compile module: InputDebugging
+Compile module: LocationServicesBPLibrary
+Compile module: MetasoundGraphCore
+Compile module: MetasoundGenerator
+Compile module: MetasoundFrontend
+Compile module: MetasoundStandardNodes
+Compile module: MetasoundEngine
+Compile module: MetasoundEngineTest
+Compile module: AudioWidgets
+Compile module: AudioSynesthesiaCore
+Compile module: AudioSynesthesia
+Compile module: WaveTable
+Compile module: MobilePatchingUtils
+Compile module: ResonanceAudio
+Compile module: SoundFields
+Compile module: Synthesis
+Compile module: WebMMoviePlayer
+Compile module: WebMMedia
+Compile module: WebMMediaFactory
+Compile module: WindowsDeviceProfileSelector
+Compile module: WindowsMoviePlayer
+Compile module: TraceUtilities
+Compile module: Proun_Pre_Alpha
+Module 'Proun_Pre_Alpha' not using unity build mode (module with fewer than 2 source files)
+Module 'Proun_Pre_Alpha' uses PCH 'O:\PerforceProjects\Proun_Pre_Alpha_5_1\Intermediate\Build\Win64\Proun_Pre_Alpha\Development\Core\SharedPCH.Core.ShadowErrors.InclOrderUnreal5_0.h.pch'
+Compile module: BuildSettings
+Compile module: TraceLog
+Compile module: Core
+Compile module: Json
+Compile module: Projects
+Compile module: CoreUObject
+Compile module: Analytics
+Compile module: SSL
+Compile module: NetCommon
+Compile module: Sockets
+Compile module: HTTP
+Compile module: AnalyticsET
+Compile module: EditorAnalyticsSession
+Compile module: AnimationCore
+Compile module: InputCore
+Compile module: ApplicationCore
+Compile module: SlateCore
+Compile module: ColorManagement
+Compile module: ImageCore
+Compile module: ImageWrapper
+Compile module: Settings
+Compile module: Slate
+Compile module: AssetRegistry
+Compile module: MessageLog
+Compile module: ToolMenus
+Compile module: ToolWidgets
+Compile module: DesktopPlatform
+Compile module: Messaging
+Compile module: SlateReflector
+Compile module: AppFramework
+Compile module: Networking
+Compile module: NullDrv
+Compile module: RHICore
+Compile module: D3D11RHI
+Compile module: D3D12RHI
+Compile module: ImageWriteQueue
+Compile module: MaterialShaderQualitySettings
+Compile module: EyeTracker
+Compile module: Renderer
+Compile module: EngineSettings
+Compile module: DeveloperSettings
+Compile module: ChaosCore
+Compile module: Voronoi
+Compile module: GeometryCore
+Compile module: Chaos
+Compile module: PhysicsCore
+Compile module: MRMesh
+Compile module: AugmentedReality
+Compile module: HeadMountedDisplay
+Compile module: BuildPatchServices
+Compile module: PreLoadScreen
+Compile module: VulkanRHI
+Compile module: OpenGLDrv
+Compile module: RHI
+Compile module: CookOnTheFly
+Compile module: RenderCore
+Compile module: TypedElementFramework
+Compile module: Foliage
+Compile module: Landscape
+Compile module: TimeManagement
+Compile module: MovieScene
+Compile module: MeshDescription
+Compile module: MeshUtilitiesCommon
+Compile module: RawMesh
+Compile module: StaticMeshDescription
+Compile module: SkeletalMeshDescription
+Compile module: MeshConversion
+Compile module: ChaosSolverEngine
+Compile module: FieldSystemEngine
+Compile module: NetCore
+Compile module: DataflowCore
+Compile module: DataflowEngine
+Compile module: GeometryCollectionEngine
+Compile module: AnimGraphRuntime
+Compile module: PropertyPath
+Compile module: UELibSampleRate
+Compile module: SignalProcessing
+Compile module: AudioMixerCore
+Compile module: AudioExtensions
+Compile module: Constraints
+Compile module: MovieSceneTracks
+Compile module: SlateRHIRenderer
+Compile module: UMG
+Compile module: TypedElementRuntime
+Compile module: MoviePlayerProxy
+Compile module: CinematicCamera
+Compile module: BinkAudioDecoder
+Compile module: NonRealtimeAudioRenderer
+Compile module: AudioPlatformConfiguration
+Compile module: SoundFieldRendering
+Compile module: AudioLinkCore
+Compile module: AudioLinkEngine
+Compile module: AudioMixer
+Compile module: Icmp
+Compile module: XmlParser
+Compile module: CoreOnline
+Compile module: JsonUtilities
+Compile module: MessagingCommon
+Compile module: EngineMessages
+Compile module: SynthBenchmark
+Compile module: IrisStub
+Compile module: GameplayTags
+Compile module: ReliabilityHandlerComponent
+Compile module: PacketHandler
+Compile module: RSA
+Compile module: PakFile
+Compile module: NetworkReplayStreaming
+Compile module: ClothingSystemRuntimeInterface
+Compile module: SourceControl
+Compile module: Localization
+Compile module: AVIWriter
+Compile module: Media
+Compile module: MediaUtils
+Compile module: MediaAssets
+Compile module: LevelSequence
+Compile module: MovieSceneCapture
+Compile module: MoviePlayer
+Compile module: StreamingPauseRendering
+Compile module: SlateNullRenderer
+Compile module: NullNetworkReplayStreaming
+Compile module: LocalFileNetworkReplayStreaming
+Compile module: HttpNetworkReplayStreaming
+Compile module: Advertising
+Compile module: LiveCoding
+Compile module: Engine
+Compile module: SandboxFile
+Compile module: Cbor
+Compile module: Serialization
+Compile module: Overlay
+Compile module: InstallBundleManager
+Compile module: NetworkFile
+Compile module: StreamingFile
+Compile module: AutomationTest
+Compile module: AutomationMessages
+Compile module: AutomationWorker
+Compile module: ClothingSystemRuntimeCommon
+Compile module: ClothingSystemRuntimeNv
+Compile module: Navmesh
+Compile module: NavigationSystem
+Compile module: DrawPrimitiveDebugger
+Compile module: GameplayDebugger
+Compile module: GameplayTasks
+Compile module: AIModule
+Compile module: UnrealEdMessages
+Compile module: ScreenShotComparisonTools
+Compile module: AutomationController
+Compile module: FunctionalTesting
+Compile module: StorageServerClient
+Compile module: SessionMessages
+Compile module: SessionServices
+Compile module: CUDA
+Compile module: AVEncoder
+Compile module: GameplayMediaEncoder
+Compile module: WindowsPlatformFeatures
+Compile module: AudioMixerPlatformAudioLink
+Compile module: AudioMixerXAudio2
+Compile module: TaskGraph
+Compile module: RealtimeProfiler
+Compile module: ProfilerMessages
+Compile module: ProfilerService
+Compile module: WebSockets
+Compile module: InputDevice
+Compile module: DirectLink
+Compile module: DatasmithCore
+Compile module: VectorVM
+Compile module: RigVM
+Compile module: Voice
+Compile module: AudioCaptureCore
+Compile module: AudioCaptureRtAudio
+Compile module: AudioCodecEngine
+Compile module: AdvancedWidgets
+Compile module: AudioAnalyzer
+Compile module: WebRTC
+Compile module: Vulkan
+Compile module: DX11
+Compile module: DX12
+Compile module: Amf
+Compile module: nvEncode
+Compile module: OpenSSL
+Compile module: libWebSockets
+Compile module: zlib
+Compile module: Imath
+Compile module: IntelTBB
+Compile module: Blosc
+Compile module: Boost
+Compile module: OpenVDB
+Compile module: IntelISPC
+Compile module: Eigen
+Compile module: ProResLib
+Compile module: ProResToolbox
+Compile module: UEOpenExr
+Compile module: BinkMediaPlayerSDK
+Compile module: WinPixEventRuntime
+Compile module: IntelOIDN
+Compile module: DX11Audio
+Compile module: UEOgg
+Compile module: Vorbis
+Compile module: VorbisFile
+Compile module: libOpus
+Compile module: LibWebM
+Compile module: BLAKE3
+Compile module: OodleDataCompression
+Compile module: IntelVTune
+Compile module: ICU
+Compile module: UElibPNG
+Compile module: LibTiff
+Compile module: LibJpegTurbo
+Compile module: XInput
+Compile module: FreeType2
+Compile module: HarfBuzz
+Compile module: Nanosvg
+Compile module: NVAPI
+Compile module: AMD_AGS
+Compile module: NVAftermath
+Compile module: IntelMetricsDiscovery
+Compile module: IntelExtensionsFramework
+Compile module: libcurl
+Compile module: WinHttp
+Compile module: OpenGL
+Compile module: MikkTSpace
+Compile module: DirectShow
+Compile module: CUDAHeader
+Compile module: XAudio2_9
+Compile module: DirectSound
+Compile module: nghttp2
+     Linking: Proun_Pre_Alpha.exe
+     Command: @"O:\PerforceProjects\Proun_Pre_Alpha_5_1\Intermediate\Build\Win64\Proun_Pre_Alpha\Development\Proun_Pre_Alpha.exe.response"
+Writing manifest to O:\PerforceProjects\Proun_Pre_Alpha_5_1\Intermediate\Build\Manifest.xml
+Proun_Pre_Alpha.target: Prerequisite O:\PerforceProjects\Proun_Pre_Alpha_5_1\Binaries\Win64\Proun_Pre_Alpha.exe is newer than the last execution of the action: 04/05/2023 10:23:57 vs 04/04/2023 15:43:59
+Proun_Pre_Alpha.exe: Prerequisite C:\UE\UE_5.1\Engine\Plugins\Marketplace\PlayFabSDK\Intermediate\Build\Win64\UnrealGame\Development\PlayFabCpp\Module.PlayFabCpp.1_of_10.cpp.obj is newer than the last execution of the action: 04/05/2023 10:39:19 vs 04/05/2023 10:23:57
+Checking for live coding mutex: Global\LiveCoding_O++PerforceProjects+Proun_Pre_Alpha_5_1+Binaries+Win64+Proun_Pre_Alpha.exe
+Deleting outdated item: O:\PerforceProjects\Proun_Pre_Alpha_5_1\Binaries\Win64\Proun_Pre_Alpha.pdb
+Building Proun_Pre_Alpha...
+Using Visual Studio 2019 14.29.30148 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[Upgrade]
+[Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_0
+[Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;' in Proun_Pre_Alpha.Target.cs.
+[Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[Upgrade]
+Determining max actions to execute in parallel (12 physical cores, 24 logical cores)
+  Executing up to 12 processes, one per physical core
+Building 2 actions with 2 processes...
+[1/2] Link Proun_Pre_Alpha.exe
+  Version 14.29.30148.0
+  ExceptionCode            = C0000006
+  ExceptionFlags           = 00000000
+  ExceptionAddress         = 00007FF70D69646A (00007FF70D680000) "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe"
+  NumberParameters         = 00000003
+  ExceptionInformation[ 0] = 0000000000000000
+  ExceptionInformation[ 1] = 00000175D01E8000
+  ExceptionInformation[ 2] = 00000000C000009C
+CONTEXT:
+  Rax    = 0000000000000008  R8     = 0000000000000014
+  Rbx    = 00000062FEDFBE18  R9     = 00000112D13EC1DA
+  Rcx    = 000000000000000C  R10    = 00000175D01E7FF2
+  Rdx    = 00000062FEDFBE20  R11    = 00000062FEDFBE58
+  Rsp    = 00000062FEDFBD40  R12    = 0000000000000002
+  Rbp    = 0000000000000001  E13    = 00000062FEDFBE18
+  Rsi    = 000001752672A500  R14    = 000001751F3A9B00
+  Rdi    = 0000000000000000  R15    = 00000000000003BF
+  Rip    = 00007FF70D69646A  EFlags = 0000000000010202
+  SegCs  = 0000000000000033  SegDs  = 000000000000002B
+  SegSs  = 000000000000002B  SegEs  = 000000000000002B
+  SegFs  = 0000000000000053  SegGs  = 000000000000002B
+  Dr0    = 0000000000000000  Dr3    = 0000000000000000
+  Dr1    = 0000000000000000  Dr6    = 0000000000000000
+  Dr2    = 0000000000000000  Dr7    = 0000000000000000
+[2/2] WriteMetadata Proun_Pre_Alpha.target cancelled
+CompilationResultException: Error: OtherCompilationError
+   at UnrealBuildTool.ActionGraph.ExecuteActions(BuildConfiguration BuildConfiguration, List`1 ActionsToExecute, List`1 TargetDescriptors, ILogger Logger) in C:\UE\UE_5.1\Engine\Source\Programs\UnrealBuildTool\System\ActionGraph.cs:line 387
+   at UnrealBuildTool.BuildMode.Build(TargetMakefile[] Makefiles, List`1 TargetDescriptors, BuildConfiguration BuildConfiguration, BuildOptions Options, FileReference WriteOutdatedActionsFile, ILogger Logger) in C:\UE\UE_5.1\Engine\Source\Programs\UnrealBuildTool\Modes\BuildMode.cs:line 628
+   at UnrealBuildTool.BuildMode.Execute(CommandLineArguments Arguments, ILogger Logger) in C:\UE\UE_5.1\Engine\Source\Programs\UnrealBuildTool\Modes\BuildMode.cs:line 242
+   at UnrealBuildTool.UnrealBuildTool.Main(String[] ArgumentsArray) in C:\UE\UE_5.1\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.cs:line 648
+WriteFileIfChanged() wrote 0 changed files of 7 requested writes.
+Timeline:
+
+[ 0.000]
+[ 0.000](+19.833) <unknown>
+[19.833]
