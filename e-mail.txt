@@ -1,0 +1,618 @@
+Delivered-To: m.hapboy@gmail.com
+Received: by 2002:a05:6358:999c:b0:115:1bcc:ba80 with SMTP id j28csp1306200rwb;
+        Sun, 9 Apr 2023 02:00:16 -0700 (PDT)
+X-Google-Smtp-Source: AKy350bI4irio2ALdxoUXtrxbzNNttQ1rgctuHZR8WKG8HkMB+YU1V/Qbrd6LVnUKxfyEk6XOXHg
+X-Received: by 2002:a17:906:241b:b0:94a:549c:472e with SMTP id z27-20020a170906241b00b0094a549c472emr2525378eja.62.1681030816503;
+        Sun, 09 Apr 2023 02:00:16 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1681030816; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=dyLiF8zaJn3JzfmfODIJyaCgdniRfNsyadV2HnPZ1X5iLaoNgrhZ1o5TQyNgUsufBX
+         93SHMr2wkFzIDZY2G0xhayq8hXqp1mNuMJ0lmVPd4udBjUow4QWOJhN6EXQRPIizHK5F
+         gSATDdjW8LREG251o2sjo+v0SnhIk1tlJpSBo3D/PJcdlkTV+7FIRHLEyqYROE5Zl27w
+         OWOJAag1HwANjw8RJFGaZOp1hbZAlRnU9nvKG1enIeW8kvNK1crxQhkI0J/kZjLgHYAn
+         qKdTAzU8pZ253JM7AOpVOltpMwSlvSzWDpijQzuMAiCAKLmVdHYLehF0FoyV8a4LaR6y
+         o8BA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:message-id:subject:cc:from
+         :to:date:dkim-signature;
+        bh=BEjvznkKOIuM3Opick7W3oanLxULn9UaIIElZ45As80=;
+        b=GOEEb9DlITAobkfJtXxtSlrsXVjYIJK90VIaiWkmZi9PFXEOLQQ5ACX0IqQEcjC8cb
+         o7mf8GbgNS2bqHKZphY4Hss4rHlcor4JlxsqgB1TIfYACl+mo9RA5B58w5Ygvrg0BMt/
+         6s+ilDLdarJejJE1o4rhSSzpUU3KJos6ajw9BZbUa0TvtuGZ8MT2xWuxuU++FKq1R0oX
+         RIhw5w3ExJQjGtxhUvKRDsfqmGVVAuihLE6EntcOgmkxvq8TM4hn7qfgH1STfCjV/X6s
+         bMQ6Qf46S9AcncikZU9C+E3pYJ9hcOznFGovtPsLvhnzpquXqJgVOuWGQYPFF8DuIfRF
+         4Sww==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@istcfoundationam.onmicrosoft.com header.s=selector1-istcfoundationam-onmicrosoft-com header.b=XIG5Y8Cc;
+       arc=pass (i=1 spf=pass spfdomain=cloudz.am dkim=pass dkdomain=cloudz.am dmarc=pass fromdomain=cloudz.am);
+       spf=pass (google.com: domain of info@cloudz.am designates 2a01:111:f400:7d00::71b as permitted sender) smtp.mailfrom=info@cloudz.am
+Return-Path: <info@cloudz.am>
+Received: from EUR05-VI1-obe.outbound.protection.outlook.com (mail-vi1eur05on2071b.outbound.protection.outlook.com. [2a01:111:f400:7d00::71b])
+        by mx.google.com with ESMTPS id nb18-20020a1709071c9200b0094a03cd54f8si5928031ejc.74.2023.04.09.02.00.16
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 09 Apr 2023 02:00:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of info@cloudz.am designates 2a01:111:f400:7d00::71b as permitted sender) client-ip=2a01:111:f400:7d00::71b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@istcfoundationam.onmicrosoft.com header.s=selector1-istcfoundationam-onmicrosoft-com header.b=XIG5Y8Cc;
+       arc=pass (i=1 spf=pass spfdomain=cloudz.am dkim=pass dkdomain=cloudz.am dmarc=pass fromdomain=cloudz.am);
+       spf=pass (google.com: domain of info@cloudz.am designates 2a01:111:f400:7d00::71b as permitted sender) smtp.mailfrom=info@cloudz.am
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none; b=XDjRJKbf5KqtvNKTp2H8EzfJGm1RAO0/fpGXIhoKzqmxjcSEjfHXOMiyAZIVCoVLeRyJS2f4Pm+wkh7ymih4Yw0r4it1vvOyndYgwHFrKLi2etTSheiJcrd+mVXellb1RXAk1EN68W9yCz7q7/rDlDGKUzWov0ZXCfNFTcKgq2Erp9yip4Y73nMLOJdTD+mD1Q0u2BjlhmQqN8bf0xi7RQBzb+EPeRXVeT/KAIc8Rp4DhxyN36yxiuV1gcugFgCSMzK+9HqhMGtEyS1h2IyB1R3lANA+aQvovrVoZ1oZsRdX4RblyDS8pWVH60IiGUEoqG/bs5+SBQkCJGTr/Ysbog==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; s=arcselector9901; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=BEjvznkKOIuM3Opick7W3oanLxULn9UaIIElZ45As80=; b=IGgjZR6uRsJRKOwQ4/wJbpqNpq85zIWMhNw+wkwE6NmA0IvHp7UUeQ6WiD6SDSVKrC1I1Dpx0bSRtcFJI/G2QRwH2kbCQTbfixKwL7krqBvfdgG7SgO2Gqfwln6Ilb76b09DAQ2nlk52O4s/z2xzpPjMigqrPSoOX/8PZeNB88tfMvjLamoI6sPJnyS7RJoHeiuKzpe/w+wYyZmJGKc0Cg4etNbhfKnfZT7EdvNYNGIQX0B8apNm9ZEGWhW3qZVowlNFxgf4IxOGXxcJjgw5cIhR7k5FsDdZeTMlZZlVy/d+9qeFt3F7elxU+8XR9woK8Z8+g/9wIIAfBXD+c0fxcw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass smtp.mailfrom=cloudz.am; dmarc=pass action=none header.from=cloudz.am; dkim=pass header.d=cloudz.am; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=istcfoundationam.onmicrosoft.com; s=selector1-istcfoundationam-onmicrosoft-com; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck; bh=BEjvznkKOIuM3Opick7W3oanLxULn9UaIIElZ45As80=; b=XIG5Y8CccdTLJlQBupPJvDF7VLMNrJTPMe+57fdU/l/FPLyPziMPg+zexE4ILrCK6kLEh1NNF9jYWCgyXHVZTZiKYGfAI8q3iqorKHH1bL0rc0WN+cQPY/CQEGvujGXI7wT2/IqF/rAQPtQctsTG1ns/NscZrxYCEdOkPBBZQ7g=
+Authentication-Results: dkim=none (message not signed) header.d=none;dmarc=none action=none header.from=cloudz.am;
+Received: from AM7PR05MB6840.eurprd05.prod.outlook.com (2603:10a6:20b:136::8) by PA4PR05MB9561.eurprd05.prod.outlook.com (2603:10a6:102:26b::19) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6277.35; Sun, 9 Apr 2023 09:00:14 +0000
+Received: from AM7PR05MB6840.eurprd05.prod.outlook.com ([fe80::4f1e:fce9:5d88:e53]) by AM7PR05MB6840.eurprd05.prod.outlook.com ([fe80::4f1e:fce9:5d88:e53%9]) with mapi id 15.20.6277.036; Sun, 9 Apr 2023 09:00:14 +0000
+Date: Sun, 9 Apr 2023 09:00:12 +0000
+To: Nairi Simonian <simonian.nairi@gmail.com>
+From: "Cloudz.am" <info@cloudz.am>
+Cc: Misak Samokatian <m.hapboy@gmail.com>
+Subject: Expired Domain Notice
+Message-ID: <4f81374b3f7da0c16e78672dbcaeaa19@www.cloudz.am>
+X-Mailer: Cloudz.am
+Content-Type: multipart/alternative; boundary="b1_4f81374b3f7da0c16e78672dbcaeaa19"
+Content-Transfer-Encoding: 8bit
+X-ClientProxiedBy: ZR0P278CA0001.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:16::11) To AM7PR05MB6840.eurprd05.prod.outlook.com (2603:10a6:20b:136::8)
+Return-Path: info@cloudz.am
+MIME-Version: 1.0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: AM7PR05MB6840:EE_|PA4PR05MB9561:EE_
+X-MS-Office365-Filtering-Correlation-Id: cd2349f6-f1be-4a26-c572-08db38d8d525
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info: jwbIrj7c4nLzRrJ8zxi9XWcCEQR01W1MXS+ckzaETcKBRCpBhNhFtrEFfmLS8KiXWXMgs64naf5CiVxwCtBzJAwdrehb/emg3Z04+s/v81dptlM32Z50JzxSCaDkq7FXrdi332JB7lOxryIfDdNFrfwF1NLcoLndQY80535/RX/0HjOP5kwn1fnDB/xnHfuEKE1xP8YbMt195li4y8afgw5KL5bW4UGZLOnQfByqCMDrzcy0rPktpO+TLn1DrDanZXMDyFIX/e31jdo037dW6eqFgb1/CJUR/Rsxyg1gyIVq4ff7DCVQ/U52z05ks4LJz9D4FkkN3eaOafFEdi+J9bGM5dIbzl4KrvexDZiKjnEPXFh9qb++SMj2x51rzk0+UvVyFifH9FQ6Le8k7wXUH2wEAuk/5dUtKjsPXAVV2r4IYYNfyzL6JPldbuiuAxDyjZ8Jjz08OGeIKMCpTK7v0zZ0iAd/zGfb1QfDvt0gjQCu/tNhgPHu12icPOd14gjYdrIbr5Q55TCDs2Ve50PsKuRQlWCk44b//EIhM9dVv6ZuoxqHZQVYrOvGo71Nac3pCOicfxm0ezJNP5UmR5xiZfOUMKo5B0I8bybPrG3ERas=
+X-Forefront-Antispam-Report: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:AM7PR05MB6840.eurprd05.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230028)(346002)(39830400003)(366004)(136003)(396003)(376002)(451199021)(1690799014)(478600001)(108616005)(24736004)(52116002)(316002)(33964004)(6512007)(26005)(6506007)(186003)(966005)(6486002)(450100002)(2906002)(15650500001)(4326008)(66946007)(5660300002)(8676002)(6916009)(41300700001)(8936002)(7116003)(66476007)(166002)(66556008)(38350700002)(38100700002)(86362001)(16799955002)(83380400001)(3480700007)(19627405001)(66899021)(579004);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0: 3GIeu+JRH+FvM8PAy90mmEckr4er3BSMhuG2DtTchumhBtyiQSMtlwD/Eq4Bcw+O6hJSVrfJGECxnOPJUkr+9yokrsTCpwckwV+gYzToS1WI1y6sfiKYFulWuXbNldYQeOvlRnlgb5GY8oi2UM09BszeDEDRTsu6dE0lpBAPbn+30ba7s43pACLCnNI1rB003zrLPjBvhp+3egtwK1dY1oAp8h54N7WfXtVd5mdHLGI/TiDDHwUOJhoQVJ4Xdr9f/hKpA4uE6TtMPRqe9D9qmIH+GGjNvYFq7J+YQ7Ummi2FW2DOcHQX3HNrF/32KSsEd5dMdH76n01/CLG9YLrOCQnjkiNyuMzZSxdIPKLO9IfagIWCSdW1AzALNfWXzsSE3MmOJYiSalk9bVxyzEv2mJH9Hr9V522D8Vai95dtnc5CPTHjKl3zPLQ5ujj/c01EANvMCqH/KxT/Kez5K2IMB5yZ0EGy1PA83mndtbz5IK5dDusjLDCWDKZ9LH6MoPYFUliuhilZ3mxp1PaDU+E00KOTwEi+6DHduz/OK7daoKKcrLuCMCaG8xd6+YiO7McGRn+niEDs4Z/UKsfFGN24/IMfy5/zk03YdG+jhRP6ajzIKbL3+rjHezxSSgh9Pupozcn2gwnb8oSZpBECNkLiKYOCYiSme5WOvbgofVKNtAjJ484tqfDhRpXL6INmsZZi5MsiAfDIbIP6CxzzNLRq+wQhQNg4zOdUwcpS2phCE2vr1TfH5ZpXNEOFIN5QOLgd1v9a57hy3bT+OgTlbmxcz+VMsVidi15MgjfnUzH9MK7ABLCE8PATSYDN8tC3O3A0PmnySLVXz+v2ReaAQddyou59hF4LDt5h5+5QcB93l9jN0ws1aKy7kHudjh8lXSQYJuwf8XJy1ZSDVq/XiJJsXxeEginXTcsd51PPZ5YnZegfqlVlEbtgYiGRkSOoqVO2f6IA3fVtBqKBq6/mwBhLUhaLDyRWIrKaX0v4zVSbTY/C13/lAG5scL1wtpo3kaFlDki9sAGDt4QytWLdDGOfIlUQbYheLDCSF2hhrTpu7QvMn7WbNkS8ymljZI5F24Yh/3n05kO5ghgKtjuTRgnTg7p2nS8JwrEtoQII4ZNaprS7asrGnynRaxJl4/9m5f9eXqG2yrlzhrJ243Q42BVFcVrAo/pkyVWR5X6TEaTmH9L77uRaC1RI28MZfTR7IEfjA4dpRiV8Eggk59ReCqBdugWRtz6xn/YY1aW/FbtUxIJX0mNTEkBlMVChW78HB5eP5UwFcih8bh6mTneWmHFF0CjjpAdTWLMEEPcFebS81UAHMz7zo4gItRZtuptV6uX4cB3EMf2cOM0f858UPziC71nweSY54T9853dudCQIBTneUpHjS6cg9c1zlC8qb7fvOkgvITiI7ucTuP4fJZcOUb3j6rAfZ7uPTC2QXEYXL8Lnfv+5IwUQBz//CF035MohSujEW07Z/LJH3N3Vj73wXWxgjPx0SIPJzAQNeoSKVUxvqbr2S3stLCao8kZ+7xPfWULjIx+OLTJw+uKSIsa2xE8/LzVg6N47n6yT5mDez6H5RSyFbrXwF223ze+WH/55
+X-OriginatorOrg: cloudz.am
+X-MS-Exchange-CrossTenant-Network-Message-Id: cd2349f6-f1be-4a26-c572-08db38d8d525
+X-MS-Exchange-CrossTenant-AuthSource: AM7PR05MB6840.eurprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Apr 2023 09:00:14.4797 (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 81c8d55d-85dd-4257-abf4-837f41252cd6
+X-MS-Exchange-CrossTenant-MailboxType: HOSTED
+X-MS-Exchange-CrossTenant-UserPrincipalName: +rfeOJtQ1O0YZ5wzpsm448s4dLYcxeNPddgw2U/o2zERjIM/NuZ8D7GbQSY2Jiqy
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PA4PR05MB9561
+
+--b1_4f81374b3f7da0c16e78672dbcaeaa19
+Content-Type: text/plain; charset=us-ascii
+
+Dear Nairi Simonian,
+
+
+The domain name listed below expired 3 days ago.
+
+
+arlonyan.am
+
+
+To ensure that the domain isn't registered by someone else, you should renew it now. To renew the domain, please visit the following page and follow the steps shown: https://www.cloudz.am//cart.php?gid=renewals
+
+
+Due to the domain expiring, the domain will not be accessible so any web site or email services associated with it will stop working. You may be able to renew it for up to 30 days after the renewal date.
+
+
+--b1_4f81374b3f7da0c16e78672dbcaeaa19
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style type="text/css">
+        .contextualExtensionHighlight{
+            color: #8295b9 !important;
+            text-decoration: none;
+            border-style: none;
+        }
+        @media only screen {
+    html, body {
+        min-height: 100%;
+        background: #fff
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    .footer-description a, .x_footer-description a {
+        color: #8295b9 !important;
+        text-decoration: none !important;
+    }
+
+    .footer-description .contextualExtensionHighlight .x_footer-description .contextualExtensionHighlight {
+        color: #8295b9 !important;
+        text-decoration: none !important;
+    }
+
+    .footer-description span, .x_footer-description span {
+        color: #8295b9 !important;
+        text-decoration: none !important;
+    }
+
+    P {
+        margin: 0;
+        margin-bottom: 10px;
+        color: #7c8088 !important;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        font-weight: 400 !important;
+        line-height: 29px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .ms-font-color-themePrimary, .ms-fontColor-themePrimary, .ms-fontColor-themePrimary, .ms-fcl-tp, .ms-font-color-themePrimary-hover:hover, .ms-font-color-themePrimary-focus:focus, .ms-font-color-themePrimary-before:before, .ms-fcl-tp-h:hover, .ms-fcl-tp-f:focus, .ms-fcl-tp-b:before {
+        text-decoration: none;
+        border-bottom: none;
+        color: #8295b9 !important;
+    }
+
+    .contextualExtensionHighlight {
+        border-style: none !important;
+        color: #8295b9 !important;
+    }
+}
+
+@media only screen and (max-width: 628px) {
+    .small-float-center {
+        margin: 0 auto !important;
+        float: none !important;
+        text-align: center !important
+    }
+
+    .container-radius {
+        border-spacing: 16px 0 !important;
+        padding-top: 16px !important;
+    }
+    .mobile-hide{
+        display: none !important;
+    }
+    .table-order-description{
+        padding-left: 8px !important;
+    }
+}
+
+@media only screen and (max-width: 628px) {
+    table.body img {
+        width: auto;
+        height: auto
+    }
+
+    table.body center {
+        min-width: 0 !important
+    }
+
+    table.body .container {
+        width: 95% !important
+    }
+
+    table.body .columns {
+        height: auto !important;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        /*padding-left: 48px !important;
+        padding-right: 48px !important*/
+    }
+
+    table.body .columns .columns {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+    }
+
+    table.body .collapse .columns {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+    }
+
+    th.small-6 {
+        display: inline-block !important;
+        width: 50% !important
+    }
+
+    th.small-12 {
+        display: inline-block !important;
+        width: 100% !important
+    }
+
+    .columns th.small-12 {
+        display: block !important;
+        width: 100% !important
+    }
+
+    table.menu {
+        width: 100% !important
+    }
+
+    table.menu td, table.menu th {
+        width: auto !important;
+        display: inline-block !important
+    }
+
+    table.menu.vertical td, table.menu.vertical th {
+        display: block !important
+    }
+
+    table.menu[align=center] {
+        width: auto !important
+    }
+
+    .x_body, table.body {
+        background-image: linear-gradient(135deg, #021038 0, #041866 100%) !important;
+        background-color: #021038;
+    }
+
+    .header-logo {
+        margin: 0 auto;
+    }
+
+    .header-top-text {
+        margin-right: auto;
+        text-align: center;
+    }
+    th.menu-item{
+        width: 50px !important;
+        min-width: 50px;
+        float: left !important;
+    }
+    th.menu-item .rounded-button{
+        float: left !important;
+    }
+}
+    </style>
+    <!--[if gte mso 9]>
+    <style type="text/css">
+        .container-radius{
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top 32px;
+        }
+        a{
+            text-decoration: none;
+            text-underline-style: none;
+            text-underline-color: none;
+        }
+        .padding-title{
+            padding-top: 10px;
+            padding-bottom:10px;
+            padding-left: 8px;
+            padding-right: 8px;
+            margin-top: 16px;
+            margin-bottom: 0;
+        }
+        @media only screen and (max-width: 628px) {
+            .small-float-center {
+                margin: 0 auto !important;
+                float: none !important;
+                text-align: center !important
+            }
+            .container-radius{
+                border-spacing: 0 !important;
+                padding-left: 16px!important;
+                padding-right: 16px!important;
+                padding-top: 16px!important;
+            }
+        }
+    </style>
+    <![endif]-->
+
+    <!--[if mso]>
+    <style>
+        .padding-title{
+            padding-top: 10px;
+            padding-bottom:10px;
+            padding-left: 8px;
+            padding-right: 8px;
+            margin-bottom: 0;
+            margin-top:16px;
+        }
+        .container-radius {
+            padding-top: 32px;
+        }
+        @media only screen and (max-width: 628px) {
+            .small-float-center {
+                margin: 0 auto !important;
+                float: none !important;
+                text-align: center !important
+            }
+            .container-radius{
+                border-spacing: 0 !important;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+                padding-top: 16px !important;
+            }
+        }
+    </style>
+    <![endif]-->
+</head>
+<body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;box-sizing:border-box;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important">
+<span class="preheader" style="color:#fff;display:none!important;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden"></span>
+
+<table class="body" style="Margin:0;background-color:#041866;background-image:linear-gradient(135deg,#021038 0,#041866 100%)!important;border-collapse:collapse;border-color:transparent;border-spacing:0;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;height:100%;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;">
+    <!--[if gte mso 9]>
+    <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+        <v:fill type="tile" color="#fff"/>
+    </v:background>
+    <![endif]-->
+    <tr style="padding:0;text-align:left;vertical-align:top">
+        <td class="center" align="center" valign="top" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+            <center data-parsed="" style="min-width:580px;width:100%">
+                <table class="spacer float-center" style="Margin:0 auto;border-collapse:collapse;border-color:transparent;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
+                    <tbody>
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <td height="40px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:40px;font-weight:400;hyphens:auto;line-height:40px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table align="center" class="container header float-center" style="Margin:0 auto;background:0 0;border-collapse:collapse;border-color:transparent;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:580px;max-width:580px;">
+                    <tbody>
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                            <table class="row collapse logo-wrapper" style="background:0 0;border-collapse:collapse;border-color:transparent;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                <tbody>
+                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                    <th class="small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:200px">
+                                        <table style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                <th valign="middle" height="49" style="Margin:0;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                    <img width="200" class="header-logo" src="https://cloudz.am/img/email-template/logo-neg.png" alt="" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:220px;width:auto;height:auto;outline:0;text-decoration:none;max-height:49px">
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                    <th class="small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:right;width:320px;vertical-align:middle;">
+                                        <table style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:right;vertical-align:top;width:100%">
+                                            <tr style="padding:0;text-align:right;vertical-align:top">
+                                                <th style="Margin:0;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:right">
+                                                    <span class="header-top-text" style="border-left-width:7px;border-left-color:transparent;border-left-style:solid;color:#ACB0B8;display:table;font-size:12px;line-height:29px;text-align:right;margin-left:auto;"> Having problems viewing this email?<a class="faded-link" href="https://cloudz.am/clientarea.php?action=emails" style="Margin:0;text-decoration:none;color:#8295b9!important;font-family:Roboto,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none;line-height:8px;"> <span style="text-decoration:none; color:#8295b9"><font color="#8295b9">View email online</font></span></a></span>
+                                                </th>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="spacer float-center" style="Margin:0 auto;border-collapse:collapse;border-color:transparent;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
+                    <tbody>
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <td height="32px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:32px;font-weight:400;hyphens:auto;line-height:32px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table cellspacing="0" cellpadding="0" border="0" align="center" class="container body-drip float-center" style="Margin:0 auto;border-bottom-left-radius:3px;border-bottom-right-radius:3px;border-collapse:collapse;border-color:transparent;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:580px;max-width:580px">
+                    <tbody>
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word;max-width:580px!important">
+                            <img width="580" height="8" src="https://cloudz.am/img/email-template/border-top.png" alt="" style="min-width:100% !important;-ms-interpolation-mode:bicubic;clear:both;display:block;width:100%!important;max-width:580px;outline:0;text-decoration:none;background:#fff;background-color:white;
+    border-top-left-radius:3px;border-top-right-radius:3px;">
+                            <table class="container-radius" style="border-left-color:#e6e6e6!important;border-bottom-color:#e6e6e6!important;border-right-color:#e6e6e6!important; border-width:0;border-style:solid;border-bottom-left-radius:3px;border-bottom-right-radius:3px;border-color:#e6e6e6;border-top:none;display:table-cell;padding-bottom:32px;border-spacing:48px 0;border-collapse:separate;width:100%;background:#fff;max-width:580px;">
+                                <tbody>
+                                <tr>
+                                    <td>
+
+                                        <table class="row" style="border-collapse:collapse;border-color:transparent;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                            <tbody>
+                                            <tr style="padding:0;text-align:left;vertical-align:top"></tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="spacer" style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                            <tbody>
+                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                <td height="32px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:32px;font-weight:400;hyphens:auto;line-height:32px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+<!-- message header end --><p>Dear Nairi Simonian,</p>
+<p>The domain name listed below expired 3 days ago.</p>
+<p>arlonyan.am</p>
+<p>To ensure that the domain isn't registered by someone else, you should renew it now. To renew the domain, please visit the following page and follow the steps shown: <a title="https://www.cloudz.am//cart.php?gid=renewals" href="https://www.cloudz.am//cart.php?gid=renewals">https://www.cloudz.am//cart.php?gid=renewals</a></p>
+<p>Due to the domain expiring, the domain will not be accessible so any web site or email services associated with it will stop working. You may be able to renew it for up to 30 days after the renewal date.</p>
+<p></p><!-- message footer start -->
+</td>
+</tr>
+</tbody>
+</table>
+<table class="spacer" style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+    <tr style="padding:0;text-align:left;vertical-align:top">
+        <td height="40px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:40px;font-weight:400;hyphens:auto;line-height:40px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+            &nbsp;
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table align="left" class="container aside-content" style="Margin:0 auto;background:0 0;border-collapse:collapse;border-color:transparent;border-spacing:0;margin:0 auto;padding:0;text-align:inherit;vertical-align:top;width:580px">
+    <tbody>
+    <tr style="padding:0;text-align:left;vertical-align:top">
+        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+            <table class="row row-wide" style="border-collapse:collapse;border-color:transparent;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                <tbody>
+                <tr style="padding:0;text-align:left;vertical-align:top">
+                    <th class="small-12 large-8 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:437px;vertical-align:middle;">
+                        <table style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                <th style="Margin:0;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left">
+                                    <p style="Margin:0;Margin-bottom:10px;margin-top:10px!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                        <a class="footer-link-color" href="https://cloudz.am" style="Margin:0;color:#8295b9;font-family:Roboto,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><b style="text-underline-style: none;border-bottom:none;border-top:none;"><font color="#8295b9">Cloudz.am</font></b></a>
+                                    </p></th>
+                            </tr>
+                        </table>
+                    </th>
+                    <th class="small-12 large-4 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;padding-bottom:16px;padding-left:0;padding-right:0!important;text-align:left;width:120px">
+                        <table style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:right;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:right;vertical-align:top">
+                                <th style="Margin:0;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left">
+                                    <table class="menu" style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:auto;margin-left:auto;border-spacing:0;">
+                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                            <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                <table style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:right;vertical-align:top;width:100%">
+                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                        <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;" width="16px"></th>
+                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:4px 0!important;text-align:right">
+                                                            <a href="#" style="Margin:0;color:#0057FF;font-family:Roboto,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><span class="rounded-button" style="align-items:center;display:flex;float:right;height:42px;justify-content:center;width:42px;"><img src="https://cloudz.am/img/email-template/fb.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"> </span></a>
+                                                        </th>
+
+                                                        <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;" width="16px"></th>
+                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:4px 0!important;text-align:center">
+                                                            <a href="#" style="Margin:0;color:#0057FF;font-family:Roboto,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><span class="rounded-button" style="align-items:center;display:flex;float:right;height:42px;justify-content:center;width:42px;"><img src="https://cloudz.am/img/email-template/g.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"> </span></a>
+                                                        </th>
+
+                                                        <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:4px 0!important;text-align:center">
+                                                            <a href="#" style="Margin:0;color:#0057FF;font-family:Roboto,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><span class="rounded-button" style="align-items:center;display:flex;float:right;height:42px;justify-content:center;width:42px;"><img src="https://cloudz.am/img/email-template/t.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"> </span></a>
+                                                        </th>
+
+                                                        <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:4px 0!important;text-align:center">
+                                                            <a href="#" style="Margin:0;color:#0057FF;font-family:Roboto,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><span class="rounded-button" style="align-items:center;display:flex;float:right;height:42px;justify-content:center;width:42px;"><img src="https://cloudz.am/img/email-template/linkedin.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"> </span></a>
+                                                        </th>
+
+                                                        <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:4px 0!important;text-align:center">
+                                                            <a href="#" style="Margin:0;color:#0057FF;font-family:Roboto,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><span class="rounded-button" style="align-items:center;display:flex;float:right;height:42px;justify-content:center;width:42px;"><img src="https://cloudz.am/img/email-template/youtube.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"> </span></a>
+                                                        </th>
+                                                        <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:4px 0!important;text-align:center">
+                                                            <a href="#" style="Margin:0;color:#0057FF;font-family:Roboto,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><span class="rounded-button" style="align-items:center;display:flex;float:right;height:42px;justify-content:center;width:42px;"><img src="https://cloudz.am/img/email-template/instagram.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"> </span></a>
+                                                        </th>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="spacer float-center" style="Margin:0 auto;border-collapse:collapse;border-color:transparent;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
+    <tbody>
+    <tr style="padding:0;text-align:left;vertical-align:top">
+        <td height="40px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:40px;font-weight:400;hyphens:auto;line-height:40px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+            &nbsp;
+        </td>
+    </tr>
+    </tbody>
+</table>
+<hr align="center" class="float-center" style="background:#243670;border:none;color:#243670;height:1px;margin-bottom:0;margin-top:0">
+<table align="center" class="container aside-content float-center" style="Margin:0 auto;background:0 0;border-collapse:collapse;border-color:transparent;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:left;vertical-align:top;width:580px;margin-bottom: 24px;">
+    <tbody>
+    <tr style="padding:0;text-align:left;vertical-align:top">
+        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+            <table class="row collapsed footer" style="border-collapse:collapse;border-color:transparent;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                <tbody>
+                <tr style="padding:0;text-align:left;vertical-align:top">
+                    <table class="row row-wide" style="border-collapse:collapse;border-color:transparent;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                        <tbody>
+                        <tr style="padding:0;text-align:left;vertical-align:top">
+                            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;padding-bottom:16px;text-align:left;width:532px">
+                                <table style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                        <th style="Margin:0;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left">
+                                            <table class="spacer" style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                <tbody>
+                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                    <td height="16px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:16px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:12px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;border-spacing:0;">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="small-12 large-2 columns first" tabindex="0" role="button" style="text-decoration:none;padding-left:0!important;text-align:left !important;" align="left">
+                                                        <a class="footer-link" role="link" target="_blank" rel="noopener" href="https://cloudz.am/clientarea.php" style="Margin:0;color:#8295b9;font-family:Roboto,sans-serif;cursor:pointer;font-size:12px;font-weight:400;line-height:29px;display:inline-block;margin:0;padding:0;text-align:left;text-decoration:none;line-height:18px"><font color="#8295b9">Login to your account</font></a>
+                                                    </th>
+                                                    <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                    <th class="small-12 large-2 columns" tabindex="0" role="button" style="text-decoration:none;padding-left:0!important;text-align:left !important;" align="left">
+                                                        <a class="footer-link" role="link" target="_blank" rel="noopener" href="https://www.cloudz.am/supporttickets.php" style="Margin:0;color:#8295b9;font-family:Roboto,sans-serif;cursor:pointer;font-size:12px;font-weight:400;line-height:29px;display:inline-block;margin:0;padding:0;text-align:left;text-decoration:none;line-height:18px"><font color="#8295b9">Support</font></a>
+                                                    </th>
+                                                    <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                    <th class="small-12 large-2 columns" tabindex="0" role="button" style="text-decoration:none;padding-left:0!important;text-align:left !important;" align="left">
+                                                        <a class="footer-link" role="link" target="_blank" rel="noopener" href="https://cloudz.am/terms/ISTC-terms_and_conditions_AM.pdf" style="Margin:0;color:#8295b9;font-family:Roboto,sans-serif;cursor:pointer;font-size:12px;font-weight:400;line-height:29px;display:inline-block;margin:0;padding:0;text-align:left;text-decoration:none;line-height:18px"><font color="#8295b9">Terms of service</font></a>
+                                                    </th>
+                                                    <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                    <th class="small-12 large-2 columns" tabindex="0" role="button" style="text-decoration:none;padding-left:0!important;text-align:left !important;" align="left">
+                                                        <a class="footer-link" role="link" target="_blank" rel="noopener" href="https://cloudz.am/terms/ISTC-terms_and_conditions_AM.pdf" style="Margin:0;color:#8295b9;font-family:Roboto,sans-serif;cursor:pointer;font-size:12px;font-weight:400;line-height:29px;display:inline-block;margin:0;padding:0;text-align:left;text-decoration:none;line-height:18px"><font color="#8295b9">Privacy policy</font></a>
+                                                    </th>
+                                                    <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                    <th class="small-12 large-2 columns last" tabindex="0" role="button" style="text-decoration:none;padding-left:0!important;text-align:left !important;" align="left">
+                                                        <a class="footer-link" role="link" target="_blank" rel="noopener" href="https://www.cloudz.am" style="Margin:0;color:#8295b9;font-family:Roboto,sans-serif;cursor:pointer;font-size:12px;font-weight:400;line-height:29px;display:inline-block;margin:0;padding:0;text-align:left;text-decoration:none;line-height:18px"><font color="#8295b9">About</font></a>
+                                                    </th>
+                                                    <th style="Margin:0 auto;color:#0a0a0a;width:16px;display:inline-block;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0!important;" width="16px"></th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="spacer" style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%;background:transparent">
+                                                <tbody>
+                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                    <td height="16px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:16px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <span class="footer-description" style="color:#8295b9;font-size:11px!important;line-height:18px;"><span style="text-decoration:none;color:#8295b9!important;font-size:11px;"><font color="#8295b9">© 2020 Cloudz.am All rights reserved</font></span></span>
+                                        </th>
+                                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</center>
+</td>
+</tr>
+</table><!-- prevent Gmail on iOS font size manipulation -->
+<div style="display:none;white-space:nowrap;font:15px courier;line-height:0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+<table class="spacer" style="border-collapse:collapse;border-color:transparent;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%;background:transparent">
+    <tbody>
+    <tr style="padding:0;text-align:left;vertical-align:top">
+        <td height="16px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Roboto,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:16px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+            &nbsp;
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+
+
+--b1_4f81374b3f7da0c16e78672dbcaeaa19--
